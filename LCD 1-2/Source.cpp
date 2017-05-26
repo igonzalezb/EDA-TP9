@@ -1,9 +1,5 @@
 #include <iostream>
-#include<cstdio>
-#include<windows.h>
-
-#define FTD2XX_EXPORTS
-#include "ftd2xx.h"
+#include "Fase1.h"
 
 int main()
 {

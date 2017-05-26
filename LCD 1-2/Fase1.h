@@ -1,7 +1,16 @@
 #pragma once
-#define FTD2XX_EXPORTS
-#include "ftd2xx.h"
+#include <cstdint>
+#include <windows.h>
 
+#define FTD2XX_EXPORTS
+extern "C"
+{
+	#include "ftd2xx.h"
+}
+
+
+
+typedef uint8_t BYTE;
 
 #define PORT_P0		0	//ENUM????
 #define PORT_P1		1
