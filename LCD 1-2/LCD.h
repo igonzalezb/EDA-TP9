@@ -1,7 +1,4 @@
-#include "Fase1.h"
-
-void lcdWriteNibble(FT_HANDLE * deviceHandler, BYTE value);
-void lcdWriteByte(FT_HANDLE * deviceHandler, BYTE value, BYTE rs);
+#include "Fase2.h"
 
 
 class LCD : public basicLCD

@@ -1,43 +1,28 @@
 #include "LCD.h"
+#include "Fase1.h"
+//Para inicializar en el modo de 4 bits debemos seguir esta secuencia :
+//1. Enviar el nibble alto de “function set” con el modo en 8 bits
+//2. Esperar 4 ms
+//3. Enviar el nibble alto de “function set” con el modo en 8 bits
+//4. Esperar 100 µs
+//5. Enviar el nibble alto de “function set” con el modo en 8 bits
+//6. Enviar el nibble alto de “function set” con el modo en 4 bits.
+//(a partir de ahora enviamos las instrucciones separadas en dos nibbles)
+//7. Enviar la instrucción “function set” con el modo en 4 bits, 2 líneas y fuente de 5x8
+//8. Enviar la instrucción “display on / off control” con todo apagado
+//9. Enviar la instrucción “clear screen”
+//10. Enviar la instrucción “entry mode set”
+//Para referencias del fabricante, ver la hoja de datos(Figura 24).
+
+////Inicializa el FTDI y el LCD
+//FT_HANDLE * deviceHandler lcdInit(int iDevice)
+//{
+//
+//}
 
 bool LCD::lcdInitOk()
 {
-	//LA QUE NOS DIO AGUSTIN
-	//lcdWriteNibble(0x03, IR);
-	//wait(4 milisegundos);
-	//lcdWriteNibble(0x03, IR);
-	//wait(100 microsegundos); //1ms 
-	//lcdWriteNibble(0x03, IR);
-	//lcdWriteNibble(0x02, IR); // todas las escrituras consisten en 2 nibbles
-	//						  //ACA ESTOY EN 4 BITS
-	//lcdWriteByte(0x38, IR); // va llamar a lcdWritenNibble con la parte alta y despues con la parte baja 
-	//							//lcdWriteNibble(0x03,IR)
-	//							//lcdWriteNibble(0x08,IR)
-	//lcdWriteBytes(0x0F, IR); //prende el display
-	//lcdWriteByte(0x01, IR);
-	//lcdWriteByte(0x06, IR);
 
-	//LA QUE NOS DIO PEDRO
-	//initOK = 1;
-	//Sleep(50);
-	//initOK &= lcdWriteNibble(0x30);
-	//Sleep(5);
-	//initOK &= lcdWriteNibble(0x30);
-	//Sleep(1);
-	//initOK &= lcdWriteNibble(0x30);
-	//Sleep(1);
-	//initOK &= lcdWriteNibble(0x20);
-	//Sleep(1);
-	//initOK &= lcdWriteIR(FUNTION_SET);
-	//Sleep(1);
-	//initOK &= lcdWriteIR(DISPLAY_CONTROL);
-	//Sleep(1);
-	//initOK &= lcdWriteIR(CLEAR_SCREEN);
-	//Sleep(10);
-	//initOK &= lcdWriteIR(ENTRY_MODE_SET);
-	//Sleep(1);
-	//pos.column = 0;
-	//pos.row = 0;
 
 }
 
@@ -48,7 +33,7 @@ FT_STATUS LCD::lcdGetError()
 
 bool LCD::lcdClear()
 {
-
+	lcdWriteByte(0x01, IR);
 }
 
 bool LCD::lcdClearToEOL()
@@ -98,29 +83,3 @@ cursorPosition LCD::lcdGetCursorPosition()
 
 
 
-void lcdWriteNibble(FT_HANDLE * deviceHandler, BYTE value, BYTE RS) //RS vale 0x00(lcdIR) o 0x02(lcdDR) 
-{
-	char buffer[1];
-	unsigned int BytesSend = 0;
-	buffer[0] = ((value < 4) & 0xF0); //buffer[0] es enable osea el menos significativo
-	buffer[0] |= RS;
-	if (FT_write(h, buffer, 1, &BytesSend) == FT_OK) //enable en 0 || RS esta en lo que me vino || nibble en value
-	{
-		Sleep(1); //1ms
-		buffer[0] |= LCD_E //define LCD_E 0x01; //prendo el bit menos significativo
-			if (FT_write(h, buffer, 1, &bytesSent) == FT_ok) //enable en 1
-			{
-				Sleep(10) //10ms
-				buffer[0] &= (~LCD_E);
-				FT_write(h, buffer, 1, &bytesSent);
-				Sleep(1); //1ms
-			}
-	}
-
-}
-
-void lcdWriteByte(FT_HANDLE * deviceHandler, BYTE value, BYTE RS)
-{
-	lcdWriteNibble(deviceHandler,((value>>4)&(0x0F)), RS);
-	lcdWriteNibble(deviceHandler,(value&0x0F), RS);
-}

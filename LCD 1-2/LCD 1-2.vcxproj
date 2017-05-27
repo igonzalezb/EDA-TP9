@@ -159,6 +159,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Fase1.cpp" />
+    <ClCompile Include="Fase2.cpp" />
     <ClCompile Include="LCD.cpp" />
     <ClCompile Include="LCD.h" />
     <ClCompile Include="Source.cpp" />
@@ -166,6 +167,7 @@
   <ItemGroup>
     <ClInclude Include="DriverFTDI\ftd2xx.h" />
     <ClInclude Include="Fase1.h" />
+    <ClInclude Include="Fase2.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
