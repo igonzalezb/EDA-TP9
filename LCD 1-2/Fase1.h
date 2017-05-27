@@ -26,8 +26,6 @@ typedef uint8_t BYTE;
 #define PORT_P7		7
 
 
-
-
 #define LCD_RS		(1 << PORT_P1)		//LCD RS, LCD_RS = 0000 0010 
 #define LCD_E		(1 << PORT_P0)		//????
 
