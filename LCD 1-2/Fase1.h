@@ -1,6 +1,7 @@
 #pragma once
 #include <cstdint>
 #include <windows.h>
+#include <iostream>
 
 #define FTD2XX_EXPORTS
 extern "C"
@@ -11,6 +12,9 @@ extern "C"
 
 
 typedef uint8_t BYTE;
+
+#define IR	0x00 //tendrian que ser un byte. LOS PONEMOS ACA Y ASI??????
+#define DR	0x01
 
 #define PORT_P0		0	//ENUM????
 #define PORT_P1		1
@@ -42,6 +46,7 @@ typedef uint8_t BYTE;
 // Hardware inverted (active low) 
 #define LCD_TEST_ON	(LCD_TEST ^ LCD_TEST)  
 #define LCD_TEST_OFF	(LCD_TEST)
+
 
 
 
