@@ -1,5 +1,6 @@
 
 #include "Fase1.h"
+#include "ftd2xx.h"
 
 //Para inicializar en el modo de 4 bits debemos seguir esta secuencia :
 //1. Enviar el nibble alto de “function set” con el modo en 8 bits (function set: 00
