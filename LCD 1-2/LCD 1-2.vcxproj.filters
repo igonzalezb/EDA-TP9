@@ -17,6 +17,12 @@
     <ClCompile Include="Fase1.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="LCD.h">
+      <Filter>Header Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LCD.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="DriverFTDI\ftd2xx.h">
