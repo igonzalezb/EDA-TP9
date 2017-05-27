@@ -106,20 +106,21 @@ void lcdWriteNibble(FT_HANDLE * deviceHandler, BYTE value, BYTE RS) //RS vale 0x
 	buffer[0] |= RS;
 	if (FT_write(h, buffer, 1, &BytesSend) == FT_OK) //enable en 0 || RS esta en lo que me vino || nibble en value
 	{
-		sleep(1); //1ms
+		Sleep(1); //1ms
 		buffer[0] |= LCD_E //define LCD_E 0x01; //prendo el bit menos significativo
 			if (FT_write(h, buffer, 1, &bytesSent) == FT_ok) //enable en 1
 			{
-				sleep(10) //10ms
+				Sleep(10) //10ms
 				buffer[0] &= (~LCD_E);
 				FT_write(h, buffer, 1, &bytesSent);
-				sleep(1); //1ms
+				Sleep(1); //1ms
 			}
 	}
 
 }
 
-void lcdWriteByte(FT_HANDLE * deviceHandler, BYTE value, BYTE rs)
+void lcdWriteByte(FT_HANDLE * deviceHandler, BYTE value, BYTE RS)
 {
-
+	lcdWriteNibble(deviceHandler,((value>>4)&(0x0F)), RS);
+	lcdWriteNibble(deviceHandler,(value&0x0F), RS);
 }
