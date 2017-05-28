@@ -63,7 +63,10 @@ bool LCD::lcdMoveCursorLeft()
 
 bool LCD::lcdSetCursorPosition(const cursorPosition pos)
 {
-
+	for (int i = pos; i < lastPosition; i++)
+	{
+		lcdWriteByte(' ', DR);
+	}
 }
 
 cursorPosition LCD::lcdGetCursorPosition()
