@@ -43,11 +43,31 @@ bool LCD::lcdClear()
 bool LCD::lcdClearToEOL()
 {
 
+	for (int i = cadd; i <= MAX_POSITION; i++)  //cheaquear que este bien 
+	{
+		lcdWriteDR(deviceHandler, ' ');
+	}
+	return true;
+
+
+	//ROCHI
+	//int oldcadd = cadd;		//se debe mantener la direccion original del cursor
+	//do
+	//{
+	//	lcdWriteDR(deviceHandler,' ');
+	//} while (cadd % (MAX_POSITION + 1));
+
+	//cadd = oldcadd;
+
+	//lcdUpdateCursor();
+	//return true;
 }
 
 basicLCD& LCD::operator<<(const unsigned char c)
 {
-
+	lcdWriteDR(deviceHandler, c);
+	//falta chequear algo
+	return *this;
 }
 
 basicLCD& LCD::operator<<(const unsigned char * c)
@@ -67,15 +87,33 @@ bool LCD::lcdMoveCursorDown()
 
 bool LCD::lcdMoveCursorRight()
 {
-	lcdWriteIR(deviceHandler, CURSOR_DISPLAY_SHIFT_RIGHT);
-	cadd++;
+	int columna = ((cadd - 1) % MAX_POSITION);
+	if (columna < (MAX_POSITION - 1))
+	{
+		cadd++;
+		lcdUpdateCursor();
+		return true;
+	}
+	else
+	{
+		return false;
+	}
 }
 
 bool LCD::lcdMoveCursorLeft()
 {
-	
-	lcdWriteIR(deviceHandler, CURSOR_DISPLAY_SHIFT_LEFT);
-	cadd--;
+	int columna = ((cadd - 1) % MAX_POSITION);
+	if (columna !=0) 
+	{
+		cadd--;
+		lcdUpdateCursor();
+		return true;
+	}
+
+	else
+	{
+		return false;
+	}
 }
 
 bool LCD::lcdSetCursorPosition(const cursorPosition pos)
@@ -89,14 +127,11 @@ bool LCD::lcdSetCursorPosition(const cursorPosition pos)
 	else
 		return false;
 
-
-
-
 }
 
 cursorPosition LCD::lcdGetCursorPosition()
 {
-	cursorPosition currentPosition = { cadd / MAX_POSITION , cadd % MAX_POSITION };
+	cursorPosition currentPosition = { cadd / MAX_POSITION , cadd % MAX_POSITION }; //fila , columna
 	return currentPosition;
 }
 
