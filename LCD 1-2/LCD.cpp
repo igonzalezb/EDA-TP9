@@ -50,7 +50,7 @@ bool LCD::lcdClearToEOL()
 	return true;
 
 
-	//ROCHI
+	
 	//int oldcadd = cadd;		//se debe mantener la direccion original del cursor
 	//do
 	//{
