@@ -4,6 +4,10 @@
 class LCD : public basicLCD
 {
 public:
+	LCD();
+
+	~LCD();
+	
 	bool lcdInitOk();
 
 	FT_STATUS lcdGetError();
@@ -28,6 +32,9 @@ public:
 
 	cursorPosition lcdGetCursorPosition();
 
+	void lcdUpdateCursor();
+
 private:
+	FT_HANDLE * deviceHandler;
 
 };

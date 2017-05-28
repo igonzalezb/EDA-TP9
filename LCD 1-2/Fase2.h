@@ -1,6 +1,6 @@
 #pragma once
 
-
+#include "Fase1.h"
 
 struct cursorPosition
 {
@@ -19,7 +19,7 @@ public:
 	* Resulta: Constructor de la clase. Inicializa el LCD y deja
 	* todo listo comenzar a utilizarlo.
 	*
-	* cadd =1 (cursor address) (ver NOTA 1)
+	* cadd = 1 (cursor address) (ver NOTA 1)
 	*=====================================================*/
 	basicLCD();
 
@@ -165,7 +165,7 @@ public:
 	* Name: lcdSetCursorPosition
 	* Entra: Recibe una estructura tipo cursorPosition
 	* Resulta: Posiciona el cursor en la posición dada
-	* por row y column. row[0-1] col[0-19]. Ante un valor inválido
+	* por row y column. row[0-1] col[0-16]. Ante un valor inválido
 	* de row y/o column ignora la instrucción (no hace nada).
 	* Modifica: (cadd).
 	* Devuelve en su nombre “true” si fue satisfactoria “false”
@@ -212,6 +212,6 @@ protected:
 	* para cadd. Este nuevo valor de cadd deberá ser transferido
 	* al cursor del display para poder sincronizar ambos.
 	*=====================================================*/
-	void lcdUpdateCursor();
+	void lcdUpdateCursor() {}
 
 };
