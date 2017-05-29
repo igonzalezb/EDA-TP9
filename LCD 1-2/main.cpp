@@ -14,16 +14,18 @@ int main()
 	//*myclass << 'h';
 
 
-	//LCD lcd;
-	//lcd << 'a' << 'a' << 'a';
+	LCD lcd;
+	lcd << 'a' << 'a' << 'a';
 	//lcd << "Hola" << " " << "Mundo";
 
-	FT_HANDLE  deviceHandler;
-	deviceHandler_lcdInit(0);
-	lcdWriteDR(&deviceHandler,'A');
+	//FT_HANDLE  deviceHandler;
+	//FT_HANDLE* jaja=deviceHandler_lcdInit(0);
+	//lcdWriteDR(jaja,'A');
 
-	std::cout << "chau";
-	getchar();
+
 	//delete myclass;
+
+	std::cout<<"chau";
+	getchar();
 	return EXIT_SUCCESS;
 }

@@ -37,6 +37,6 @@ public:
 	void lcdUpdateCursor();
 
 private:
-	FT_HANDLE * deviceHandler;
+	FT_HANDLE deviceHandler;
 
 };

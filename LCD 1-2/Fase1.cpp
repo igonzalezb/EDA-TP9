@@ -18,9 +18,9 @@
 
 
 
-FT_HANDLE * deviceHandler_lcdInit(int iDevice)	//REVISAR 
+FT_HANDLE& deviceHandler_lcdInit(int iDevice)	//REVISAR 
 {
-	FT_HANDLE deviceHandler;
+	FT_HANDLE deviceHandler = 0;
 	if (FT_Open(iDevice, &deviceHandler) == FT_OK)
 	{
 		UCHAR Mask = 0xFF;	//Selects all FTDI pins.
@@ -39,7 +39,7 @@ FT_HANDLE * deviceHandler_lcdInit(int iDevice)	//REVISAR
 			lcdWriteByte(&deviceHandler, 0x06, IR); 
 
 
-			return &deviceHandler;
+			return deviceHandler;
 		}
 		
 		else
@@ -49,7 +49,7 @@ FT_HANDLE * deviceHandler_lcdInit(int iDevice)	//REVISAR
 	}
 
 	printf("Couldn't open USB %d\n", iDevice);
-	return nullptr;
+	return deviceHandler;
 }
 
 void lcdWriteIR(FT_HANDLE * deviceHandler, BYTE valor)

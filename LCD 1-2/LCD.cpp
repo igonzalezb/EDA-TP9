@@ -20,7 +20,7 @@ bool LCD::lcdInitOk()
 	for (int i = 0; (i < 10) && !found; i++)
 	{
 		deviceHandler = deviceHandler_lcdInit(i);
-		if (deviceHandler != nullptr)
+		if (deviceHandler != 0)
 			found = true;
 	}
 	return true;
@@ -34,7 +34,7 @@ FT_STATUS LCD::lcdGetError()
 
 bool LCD::lcdClear()
 {
-	lcdWriteIR(deviceHandler, CLEAR_DISPLAY);
+	lcdWriteIR(&deviceHandler, CLEAR_DISPLAY);
 	cadd = 1;
 	lcdUpdateCursor();
 	return true;
@@ -60,7 +60,7 @@ bool LCD::lcdClearToEOL()
 
 basicLCD& LCD::operator<<(const unsigned char c)
 {
-	lcdWriteDR(deviceHandler, c);
+	lcdWriteDR(&deviceHandler, c);
 	cadd++;
 	lcdUpdateCursor();
 	cursorPosition Pos = lcdGetCursorPosition();
@@ -209,7 +209,7 @@ cursorPosition LCD::lcdGetCursorPosition()
 
 void LCD::lcdUpdateCursor()
 {
-	lcdWriteIR(deviceHandler, LCD_SET_DDRAM | (cadd - 1));
+	lcdWriteIR(&deviceHandler, LCD_SET_DDRAM | (cadd - 1));
 
 }
 

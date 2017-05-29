@@ -54,7 +54,7 @@ typedef uint8_t BYTE;
 
 
 //Inicializa el FTDI y el LCD 
-FT_HANDLE * deviceHandler_lcdInit(int iDevice);
+FT_HANDLE& deviceHandler_lcdInit(int iDevice);
 
 //Escribe un byte al IR 
 void lcdWriteIR(FT_HANDLE * deviceHandler, BYTE valor);
