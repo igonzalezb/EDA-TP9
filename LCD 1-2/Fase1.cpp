@@ -3,7 +3,7 @@
 #include "ftd2xx.h"
 
 //Para inicializar en el modo de 4 bits debemos seguir esta secuencia :
-//1. Enviar el nibble alto de “function set” con el modo en 8 bits (function set: 00
+//1. Enviar el nibble alto de “function set” con el modo en 8 bits 
 //2. Esperar 4 ms
 //3. Enviar el nibble alto de “function set” con el modo en 8 bits
 //4. Esperar 100 µs
@@ -33,7 +33,7 @@ FT_HANDLE * deviceHandler_lcdInit(int iDevice)	//REVISAR
 			Sleep(0.1);						
 			lcdWriteNibble(&deviceHandler, 0x03, IR);
 			lcdWriteNibble(&deviceHandler, 0x02, IR);
-			lcdWriteByte(&deviceHandler, 0x28, IR); 
+			lcdWriteByte(&deviceHandler, 0x38, IR); //28
 			lcdWriteByte(&deviceHandler, 0x08, IR); 
 			lcdWriteByte(&deviceHandler, 0x01, IR); 
 			lcdWriteByte(&deviceHandler, 0x06, IR); 
