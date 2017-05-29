@@ -48,6 +48,10 @@ typedef uint8_t BYTE;
 
 #define MAX_POSITION	16
 
+#define ROW_1	0
+#define ROW_2	4
+#define CLEAR_DISPLAY					0x01	//0000 0001
+
 
 //Inicializa el FTDI y el LCD 
 FT_HANDLE * deviceHandler_lcdInit(int iDevice);
