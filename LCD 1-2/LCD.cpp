@@ -1,13 +1,13 @@
 #include "LCD.h"
 
-
-#define CLEAR_DISPLAY				0x01	//0000 0001
-#define CURSOR_DISPLAY_SHIFT_RIGHT		0x14	//0001 0100
-#define CURSOR_DISPLAY_SHIFT_LEFT		0x10	//0001 0000
+#define ROW_1	0
+#define ROW_2	4
+#define CLEAR_DISPLAY					0x01	//0000 0001
 
 LCD::LCD()
 {
 	cadd = 1;
+	lcdUpdateCursor();
 	lcdInitOk();
 }
 
@@ -37,52 +37,123 @@ bool LCD::lcdClear()
 {
 	lcdWriteIR(deviceHandler, CLEAR_DISPLAY);
 	cadd = 1;
+	lcdUpdateCursor();
 	return true;
 }
 
 bool LCD::lcdClearToEOL()
 {
+	int _cadd = cadd;
 
-	for (int i = cadd; i <= MAX_POSITION; i++)  //cheaquear que este bien 
+	for (int i = (cadd % MAX_POSITION); i<= MAX_POSITION; i++)  //cheaquear que este bien 
 	{
-		lcdWriteDR(deviceHandler, ' ');
+
+		operator<< (' ');
+
 	}
+
+	cadd = _cadd;
+	lcdUpdateCursor();
+
 	return true;
 
-
-	
-	//int oldcadd = cadd;		//se debe mantener la direccion original del cursor
-	//do
-	//{
-	//	lcdWriteDR(deviceHandler,' ');
-	//} while (cadd % (MAX_POSITION + 1));
-
-	//cadd = oldcadd;
-
-	//lcdUpdateCursor();
-	//return true;
 }
 
 basicLCD& LCD::operator<<(const unsigned char c)
 {
 	lcdWriteDR(deviceHandler, c);
-	//falta chequear algo
+	cadd++;
+	lcdUpdateCursor();
+	cursorPosition Pos = lcdGetCursorPosition();
+
+	switch (Pos.row)
+	{
+	case ROW_1: 
+	{
+		if (Pos.column == MAX_POSITION)
+		{
+			Pos.row = ROW_2;
+			Pos.column = 0;
+
+		}
+		else
+		{
+			Pos.column++;
+		}
+
+		lcdSetCursorPosition(Pos); //cambia el valor de cadd
+		lcdUpdateCursor();
+	}
+	break;
+
+	case ROW_2:
+	{
+		if (Pos.column == MAX_POSITION)
+		{
+			Sleep(5);
+
+			lcdClear();
+
+			Pos.row = ROW_1;
+			Pos.column = 0;
+		}
+		else
+		{
+			Pos.column++;
+		}
+		lcdSetCursorPosition(Pos);
+		lcdUpdateCursor();
+	}
+	break;
+
+	}
+
 	return *this;
 }
 
+
 basicLCD& LCD::operator<<(const unsigned char * c)
 {
+	for (int i = 0; c[i]!='\0'; i++)
+	{
+		operator<< (c[i]);
+	}
 
+	return *this;
 }
 
 bool LCD::lcdMoveCursorUp()
 {
+	cursorPosition Pos = lcdGetCursorPosition();
 
+	if (Pos.row == ROW_2)
+	{
+		Pos.row = ROW_1;
+		lcdSetCursorPosition(Pos);
+		lcdUpdateCursor();
+		return true;
+	}
+	else
+	{
+		return false;
+	}
 }
 
 bool LCD::lcdMoveCursorDown()
 {
+	cursorPosition Pos = lcdGetCursorPosition();
 
+	if (Pos.row == ROW_1)
+	{
+		Pos.row = ROW_2;
+		lcdSetCursorPosition(Pos);
+		lcdUpdateCursor();
+		return true;
+	}
+	else
+	{
+		return false;
+	}
 }
 
 bool LCD::lcdMoveCursorRight()
@@ -120,7 +191,8 @@ bool LCD::lcdSetCursorPosition(const cursorPosition pos)
 {
 	if (pos.column < MAX_POSITION && pos.row < 2)
 	{
-		cadd = pos.column + pos.row * MAX_POSITION; //+ 1
+		cadd = pos.column + pos.row * MAX_POSITION + 1; // +1 porque lcdUpdateCursor() 
+														// posiciona uno antes
 		lcdUpdateCursor();
 		return true;
 	}
@@ -139,6 +211,7 @@ cursorPosition LCD::lcdGetCursorPosition()
 void LCD::lcdUpdateCursor()
 {
 	lcdWriteIR(deviceHandler, LCD_SET_DDRAM | (cadd - 1));
+
 }
 
 
