@@ -13,6 +13,7 @@ LCD::LCD()
 
 LCD::~LCD()
 {
+
 }
 
 bool LCD::lcdInitOk()
