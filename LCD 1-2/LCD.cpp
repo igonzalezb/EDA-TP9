@@ -1,8 +1,6 @@
 #include "LCD.h"
 
-#define ROW_1	0
-#define ROW_2	4
-#define CLEAR_DISPLAY					0x01	//0000 0001
+
 
 LCD::LCD()
 {

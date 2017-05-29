@@ -21,7 +21,7 @@ public:
 	*
 	* cadd = 1 (cursor address) (ver NOTA 1)
 	*=====================================================*/
-	basicLCD();
+	basicLCD() { ; }
 
 
 	/*=====================================================
@@ -31,7 +31,7 @@ public:
 	* que se hubiera tomado de forma de evitar
 	* "resources leak".
 	*=====================================================*/
-	~basicLCD();
+	~basicLCD() { ; }
 
 
 	/*=====================================================
@@ -185,6 +185,11 @@ public:
 	virtual cursorPosition lcdGetCursorPosition() = 0;
 
 
+
+
+
+
+
 protected:
 	/*=====================================================
 	* Nota 1: cadd (cursor address) es una variable
@@ -212,6 +217,6 @@ protected:
 	* para cadd. Este nuevo valor de cadd deberá ser transferido
 	* al cursor del display para poder sincronizar ambos.
 	*=====================================================*/
-	void lcdUpdateCursor() {}
+	void lcdUpdateCursor() { ; }
 
 };

@@ -1,11 +1,9 @@
 #include <iostream>
-#include "Fase1.h"
-//#include "Fase2.h"
 #include "LCD.h"
 
 int main()
 {
-	LCD* myclass = new LCD;
+	LCD* myclass = new LCD();
 
 	myclass->lcdClear();
 
