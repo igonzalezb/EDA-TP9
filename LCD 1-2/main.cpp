@@ -15,7 +15,7 @@ int main()
 
 
 	LCD lcd;
-	lcd << 'a' << 'a' << 'a';
+	lcd << 'a';
 	//lcd << "Hola" << " " << "Mundo";
 
 	//FT_HANDLE  deviceHandler;
@@ -25,7 +25,7 @@ int main()
 
 	//delete myclass;
 
-	std::cout<<"chau";
+	std::cout<<"a";
 	getchar();
 	return EXIT_SUCCESS;
 }

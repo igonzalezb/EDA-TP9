@@ -16,7 +16,7 @@ LCD::~LCD()
 bool LCD::lcdInitOk()
 {
 	bool found = false;
-	for (int i = 0; (i < 10) && !found; i++)
+	for (int i = 1; (i < 10) && !found; i++)
 	{
 		deviceHandler = deviceHandler_lcdInit(i);
 		if (deviceHandler != 0)

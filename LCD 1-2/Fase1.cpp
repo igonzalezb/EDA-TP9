@@ -30,11 +30,11 @@ FT_HANDLE& deviceHandler_lcdInit(int iDevice)	//REVISAR
 		{
 			lcdWriteNibble(&deviceHandler, 0x03, IR); 
 			//Sleep(4);
-			std::this_thread::sleep_for(std::chrono::milliseconds(4));
+			std::this_thread::sleep_for(std::chrono::milliseconds(50));
 
 			lcdWriteNibble(&deviceHandler, 0x03, IR);
 			//Sleep(0.1);						
-			std::this_thread::sleep_for(std::chrono::microseconds(100));
+			std::this_thread::sleep_for(std::chrono::microseconds(1000));
 
 			lcdWriteNibble(&deviceHandler, 0x03, IR);
 			lcdWriteNibble(&deviceHandler, 0x02, IR);
@@ -73,16 +73,16 @@ void lcdWriteNibble(FT_HANDLE * deviceHandler, BYTE value, BYTE RS) //RS vale 0x
 	unsigned long BytesSent = 0;
 	buffer[0] = ((value << 4) & 0xF0); //buffer[0] es enable osea el menos significativo
 	buffer[0] |= RS;
-	if (FT_Write(deviceHandler, buffer, 1, &BytesSent) == FT_OK) //enable en 0 || RS esta en lo que me vino || nibble en value
+	if (FT_Write(*deviceHandler, buffer, 1, &BytesSent) == FT_OK) //enable en 0 || RS esta en lo que me vino || nibble en value
 	{
 		Sleep(1); //1ms
 		buffer[0] |= LCD_E; //define LCD_E 0x01; //prendo el bit menos significativo
 
-			if (FT_Write(deviceHandler, buffer, 1, &BytesSent) == FT_OK) //enable en 1
+			if (FT_Write(*deviceHandler, buffer, 1, &BytesSent) == FT_OK) //enable en 1
 			{
 				Sleep(10); 
 				buffer[0] &= (~LCD_E);
-				FT_Write(deviceHandler, buffer, 1, &BytesSent);
+				FT_Write(*deviceHandler, buffer, 1, &BytesSent);
 				Sleep(1); 
 			}
 	}
