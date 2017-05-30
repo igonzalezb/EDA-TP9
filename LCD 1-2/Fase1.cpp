@@ -1,6 +1,7 @@
 
 #include "Fase1.h"
-#include "ftd2xx.h"
+#include <chrono>
+#include <thread>
 
 //Para inicializar en el modo de 4 bits debemos seguir esta secuencia :
 //1. Enviar el nibble alto de “function set” con el modo en 8 bits 
@@ -28,9 +29,13 @@ FT_HANDLE& deviceHandler_lcdInit(int iDevice)	//REVISAR
 		if (FT_SetBitMode(deviceHandler, Mask, Mode) == FT_OK)	
 		{
 			lcdWriteNibble(&deviceHandler, 0x03, IR); 
-			Sleep(4);						
+			//Sleep(4);
+			std::this_thread::sleep_for(std::chrono::milliseconds(4));
+
 			lcdWriteNibble(&deviceHandler, 0x03, IR);
-			Sleep(0.1);						
+			//Sleep(0.1);						
+			std::this_thread::sleep_for(std::chrono::microseconds(100));
+
 			lcdWriteNibble(&deviceHandler, 0x03, IR);
 			lcdWriteNibble(&deviceHandler, 0x02, IR);
 			lcdWriteByte(&deviceHandler, 0x38, IR); //28

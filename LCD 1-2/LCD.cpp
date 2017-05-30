@@ -5,7 +5,6 @@
 LCD::LCD()
 {
 	cadd = 1;
-	lcdUpdateCursor();
 	lcdInitOk();
 }
 
@@ -36,7 +35,6 @@ bool LCD::lcdClear()
 {
 	lcdWriteIR(&deviceHandler, CLEAR_DISPLAY);
 	cadd = 1;
-	lcdUpdateCursor();
 	return true;
 }
 
@@ -47,8 +45,7 @@ bool LCD::lcdClearToEOL()
 	for (int i = (cadd % MAX_POSITION); i<= MAX_POSITION; i++)  //cheaquear que este bien 
 	{
 
-		operator<< (' ');
-
+		escritura(' ');
 	}
 
 	cadd = _cadd;
@@ -60,62 +57,19 @@ bool LCD::lcdClearToEOL()
 
 basicLCD& LCD::operator<<(const unsigned char c)
 {
-	lcdWriteDR(&deviceHandler, c);
-	cadd++;
-	lcdUpdateCursor();
-	cursorPosition Pos = lcdGetCursorPosition();
-
-	switch (Pos.row)
-	{
-	case ROW_1: 
-	{
-		if (Pos.column == MAX_POSITION)
-		{
-			Pos.row = ROW_2;
-			Pos.column = 0;
-
-		}
-		else
-		{
-			Pos.column++;
-		}
-
-		lcdSetCursorPosition(Pos); //cambia el valor de cadd
-		lcdUpdateCursor();
-	}
-	break;
-
-	case ROW_2:
-	{
-		if (Pos.column == MAX_POSITION)
-		{
-			Sleep(5);
-
-			lcdClear();
-
-			Pos.row = ROW_1;
-			Pos.column = 0;
-		}
-		else
-		{
-			Pos.column++;
-		}
-		lcdSetCursorPosition(Pos);
-		lcdUpdateCursor();
-	}
-	break;
-
-	}
+	
+	escritura(c);
 
 	return *this;
 }
+
 
 
 basicLCD& LCD::operator<<(const unsigned char * c)
 {
 	for (int i = 0; c[i]!='\0'; i++)
 	{
-		operator<< (c[i]);
+		escritura(c[i]);
 	}
 
 	return *this;
@@ -214,3 +168,53 @@ void LCD::lcdUpdateCursor()
 }
 
 
+void LCD::escritura(const unsigned char c)
+{
+	lcdWriteDR(&deviceHandler, c);
+	cadd++;
+	lcdUpdateCursor();
+
+	cursorPosition Pos = lcdGetCursorPosition();
+
+	switch (Pos.row)
+	{
+	case ROW_1:
+	{
+		if (Pos.column == MAX_POSITION)
+		{
+			Pos.row = ROW_2;
+			Pos.column = 0;
+
+		}
+		else
+		{
+			Pos.column++;
+		}
+
+		lcdSetCursorPosition(Pos); //cambia el valor de cadd
+		lcdUpdateCursor();
+	}
+	break;
+
+	case ROW_2:
+	{
+		if (Pos.column == MAX_POSITION)
+		{
+			Sleep(1000);
+
+			lcdClear();
+
+			Pos.row = ROW_1;
+			Pos.column = 0;
+		}
+		else
+		{
+			Pos.column++;
+		}
+		lcdSetCursorPosition(Pos);
+		lcdUpdateCursor();
+	}
+	break;
+
+	}
+}
