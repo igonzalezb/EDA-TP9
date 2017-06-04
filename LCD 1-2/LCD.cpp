@@ -23,7 +23,6 @@ bool LCD::lcdInitOk()
 			found = true;
 	}
 	return true;
-
 }
 
 FT_STATUS LCD::lcdGetError()
@@ -34,35 +33,28 @@ FT_STATUS LCD::lcdGetError()
 bool LCD::lcdClear()
 {
 	lcdWriteIR(&deviceHandler, CLEAR_DISPLAY);
-	cadd = 1;
+	cadd = 1;//1
 	return true;
 }
 
 bool LCD::lcdClearToEOL()
 {
 	int _cadd = cadd;
-
 	for (int i = (cadd % MAX_POSITION); i<= MAX_POSITION; i++)  //cheaquear que este bien 
 	{
 
 		escritura(' ');
 	}
-
 	cadd = _cadd;
 	lcdUpdateCursor();
-
 	return true;
-
 }
 
 basicLCD& LCD::operator<<(const unsigned char c)
-{
-	
+{	
 	escritura(c);
-
 	return *this;
 }
-
 
 
 basicLCD& LCD::operator<<(const unsigned char * c)
@@ -71,14 +63,12 @@ basicLCD& LCD::operator<<(const unsigned char * c)
 	{
 		escritura(c[i]);
 	}
-
 	return *this;
 }
 
 bool LCD::lcdMoveCursorUp()
 {
 	cursorPosition Pos = lcdGetCursorPosition();
-
 	if (Pos.row == ROW_2)
 	{
 		Pos.row = ROW_1;
@@ -164,7 +154,6 @@ cursorPosition LCD::lcdGetCursorPosition()
 void LCD::lcdUpdateCursor()
 {
 	lcdWriteIR(&deviceHandler, LCD_SET_DDRAM | (cadd - 1));
-
 }
 
 
@@ -184,18 +173,15 @@ void LCD::escritura(const unsigned char c)
 		{
 			Pos.row = ROW_2;
 			Pos.column = 0;
-
 		}
 		else
 		{
 			Pos.column++;
 		}
-
 		lcdSetCursorPosition(Pos); //cambia el valor de cadd
 		lcdUpdateCursor();
 	}
 	break;
-
 	case ROW_2:
 	{
 		if (Pos.column == MAX_POSITION)
@@ -215,6 +201,5 @@ void LCD::escritura(const unsigned char c)
 		lcdUpdateCursor();
 	}
 	break;
-
 	}
 }

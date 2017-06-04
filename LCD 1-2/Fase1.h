@@ -64,7 +64,9 @@ void lcdWriteDR(FT_HANDLE * deviceHandler, BYTE valor);
 
 //La primera función escribe directamente un nibble al display.Por ejemplo :
 //lcdWriteNibble(deviceHandler, LCD_RS | LCD_D6);
-void lcdWriteNibble(FT_HANDLE * deviceHandler, BYTE value, BYTE RS);
+
+//void lcdWriteNibble(FT_HANDLE * deviceHandler, BYTE value, BYTE RS); NUESTRA
+void lcdWriteNibble(FT_HANDLE * deviceHandler, BYTE value); //AGUSTIN
 
 //Escribe el byte recibido al display.Si utilizamos el modo 4 bits
 //deberemos realizar dos llamadas a lcdWrietNibble(); por lo que la primera función será
