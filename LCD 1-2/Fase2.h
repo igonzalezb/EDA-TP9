@@ -9,7 +9,6 @@ struct cursorPosition
 };
 
 
-
 class basicLCD
 {
 public:
@@ -183,11 +182,6 @@ public:
 	* Devuelve una estructura tipo cursorPosition
 	*=====================================================*/
 	virtual cursorPosition lcdGetCursorPosition() = 0;
-
-
-
-
-
 
 
 protected:
