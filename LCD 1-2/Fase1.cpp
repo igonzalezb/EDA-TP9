@@ -28,21 +28,21 @@ FT_HANDLE& deviceHandler_lcdInit(int iDevice)	//REVISAR
 		UCHAR Mode = 1; 	// Set asynchronous bit-bang mode
 		if (FT_SetBitMode(deviceHandler, Mask, Mode) == FT_OK)	
 		{
-			//lcdWriteNibble(&deviceHandler, 0x03, IR); 
-			//std::this_thread::sleep_for(std::chrono::milliseconds(50)); 
+			lcdWriteNibble(&deviceHandler, 0x03, IR); 
+			std::this_thread::sleep_for(std::chrono::milliseconds(50)); 
 
-			//lcdWriteNibble(&deviceHandler, 0x03, IR);					
-			//std::this_thread::sleep_for(std::chrono::microseconds(1000));
+			lcdWriteNibble(&deviceHandler, 0x03, IR);					
+			std::this_thread::sleep_for(std::chrono::microseconds(1000));
 
-			//lcdWriteNibble(&deviceHandler, 0x03, IR);
-			//lcdWriteNibble(&deviceHandler, 0x02, IR);
-			//lcdWriteByte(&deviceHandler, 0x38, IR); //28
-			//lcdWriteByte(&deviceHandler, 0x08, IR); 
-			//lcdWriteByte(&deviceHandler, 0x01, IR); 
-			//lcdWriteByte(&deviceHandler, 0x06, IR); 
+			lcdWriteNibble(&deviceHandler, 0x03, IR);
+			lcdWriteNibble(&deviceHandler, 0x02, IR);
+			lcdWriteByte(&deviceHandler, 0x38, IR); //28
+			lcdWriteByte(&deviceHandler, 0x08, IR); 
+			lcdWriteByte(&deviceHandler, 0x01, IR); 
+			lcdWriteByte(&deviceHandler, 0x06, IR); 
 
 			
-			Sleep(50);
+	/*		Sleep(50);
 			lcdWriteNibble(&deviceHandler, 0x30);
 			Sleep(5);
 			lcdWriteNibble(&deviceHandler, 0x30);
@@ -58,7 +58,7 @@ FT_HANDLE& deviceHandler_lcdInit(int iDevice)	//REVISAR
 			lcdWriteIR(&deviceHandler, 0x01);
 			Sleep(10);
 			lcdWriteIR(&deviceHandler, 0x06);
-			Sleep(1);
+			Sleep(1);*/
 
 			return deviceHandler;
 		}	
@@ -82,58 +82,87 @@ void lcdWriteDR(FT_HANDLE * deviceHandler, BYTE valor)
 }
 
 
-//void lcdWriteNibble(FT_HANDLE * deviceHandler, BYTE value, BYTE RS) //RS vale 0x00(lcdIR) o 0x02(lcdDR) //NUESTRAAAA
-//{
-	//char buffer[1];
-	//unsigned long BytesSent = 0;
-	//buffer[0] = ((value << 4) & 0xF0); //buffer[0] es enable osea el menos significativo
-	//buffer[0] |= RS;
-	//if (FT_Write(*deviceHandler, buffer, 1, &BytesSent) == FT_OK) //enable en 0 || RS esta en lo que me vino || nibble en value
-	//{
-	//	Sleep(1); //1ms
-	//	buffer[0] |= LCD_E; //define LCD_E 0x01; //prendo el bit menos significativo
-
-	//		if (FT_Write(*deviceHandler, buffer, 1, &BytesSent) == FT_OK) //enable en 1
-	//		{
-	//			Sleep(10); 
-	//			buffer[0] &= (~LCD_E);
-	//			FT_Write(*deviceHandler, buffer, 1, &BytesSent);//se esta poniendo negro el cuadradito de la esquina arriba a la derecha
-	//			Sleep(1); 
-	//		}
-	//}
-//}
-
-void lcdWriteNibble(FT_HANDLE * deviceHandler, BYTE value) //AGUSTIN
+void lcdWriteNibble(FT_HANDLE * deviceHandler, BYTE value, BYTE RS) //RS vale 0x00(lcdIR) o 0x02(lcdDR) //NUESTRAAAA
 {
-	value &= 0xF2;
-	BYTE info = value&LCD_RS;
-	DWORD sizeSent = 0;
-	FT_STATUS status = FT_OK;
-	status += FT_Write(*deviceHandler, &info, 1, &sizeSent);
-	info = value;
-	status += FT_Write(*deviceHandler, &info, 1, &sizeSent);
-	Sleep(1);
-	info = value | LCD_E;
-	status += FT_Write(*deviceHandler, &info, 1, &sizeSent);
-	Sleep(1);
-	info = value;
-	status += FT_Write(*deviceHandler, &info, 1, &sizeSent);
-	Sleep(1);
+	char buffer[1];
+	unsigned long BytesSent = 0;
+	buffer[0] = ((value << 4) & 0xF0); //buffer[0] es enable osea el menos significativo
+	buffer[0] |= RS;
+	if (FT_Write(*deviceHandler, buffer, 1, &BytesSent) == FT_OK) //enable en 0 || RS esta en lo que me vino || nibble en value
+	{
+		Sleep(1); //1ms
+		buffer[0] |= LCD_E; //define LCD_E 0x01; //prendo el bit menos significativo
+
+			if (FT_Write(*deviceHandler, buffer, 1, &BytesSent) == FT_OK) //enable en 1
+			{
+				Sleep(10); 
+				buffer[0] &= (~LCD_E);
+				FT_Write(*deviceHandler, buffer, 1, &BytesSent);//se esta poniendo negro el cuadradito de la esquina arriba a la derecha
+				Sleep(1); 
+			}
+	}
 }
 
-//NUESTRA
-//void lcdWriteByte(FT_HANDLE * deviceHandler, BYTE value, BYTE RS) //esta bien esto? tiene que llamar a write nibble con parte baja y despues alta
+//bool lcdWriteNibble(unsigned char value) //RAMA
 //{
-//	lcdWriteNibble(deviceHandler, ((value >> 4)&(0x0F)), RS);
-//	lcdWriteNibble(deviceHandler, (value & 0x0F), RS);
+//	//Envia un nibble al puerto.
+//	bool prog_status = false;//true si estuvo todo 10 puntitos
+//	DWORD sizeSent = 0;
+//	unsigned char info = LCD_RS;
+//
+//	if ((status_display = FT_Write(deviceHandler, &info, 1, &sizeSent)) == FT_OK)
+//	{
+//		info = value;
+//		if ((status_display = FT_Write(display_handle, &info, 1, &sizeSent)) == FT_OK)
+//		{
+//			Sleep(1);
+//			info = value | LCD_E;
+//			if ((status_display = FT_Write(display_handle, &info, 1, &sizeSent)) == FT_OK)
+//			{
+//				mySleep(1);
+//				info = value;
+//				if ((status_display = FT_Write(display_handle, &info, 1, &sizeSent)) == FT_OK)
+//				{
+//					mySleep(1);
+//					prog_status = true;
+//				}
+//			}
+//		}
+//	}
+//	return prog_status;
 //}
+
+//void lcdWriteNibble(FT_HANDLE * deviceHandler, BYTE value) //AGUSTIN
+//{
+//	value &= 0xF2;
+//	BYTE info = value&LCD_RS;
+//	DWORD sizeSent = 0;
+//	FT_STATUS status = FT_OK;
+//	status += FT_Write(*deviceHandler, &info, 1, &sizeSent);
+//	info = value;
+//	status += FT_Write(*deviceHandler, &info, 1, &sizeSent);
+//	Sleep(1);
+//	info = value | LCD_E;
+//	status += FT_Write(*deviceHandler, &info, 1, &sizeSent);
+//	Sleep(1);
+//	info = value;
+//	status += FT_Write(*deviceHandler, &info, 1, &sizeSent);
+//	Sleep(1);
+//}
+
+//NUESTRA
+void lcdWriteByte(FT_HANDLE * deviceHandler, BYTE value, BYTE RS) //esta bien esto? tiene que llamar a write nibble con parte baja y despues alta
+{
+	lcdWriteNibble(deviceHandler, ((value >> 4)&(0x0F)), RS);
+	lcdWriteNibble(deviceHandler, (value & 0x0F), RS);
+}
 
 //AGUSTIN
 //#define MSN(x) ((x)&0xF0)
 //#define LSN(x) (((x)<<4)&0xF0)
-void lcdWriteByte(FT_HANDLE * deviceHandler, BYTE value, BYTE rs)
-{
-
-	lcdWriteNibble(deviceHandler, ((value&(0xF0)) | rs));
-	lcdWriteNibble(deviceHandler, ((value << 4) & 0xF0) | rs);
-}
+//void lcdWriteByte(FT_HANDLE * deviceHandler, BYTE value, BYTE rs)
+//{
+//
+//	lcdWriteNibble(deviceHandler, ((value&(0xF0)) | rs));
+//	lcdWriteNibble(deviceHandler, ((value << 4) & 0xF0) | rs);
+//}

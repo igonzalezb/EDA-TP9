@@ -47,10 +47,13 @@ typedef uint8_t BYTE;
 #define LCD_SET_DDRAM	0x80		//1000 0000
 
 #define MAX_POSITION	16
+#define MAX_ROW			2
 
 #define ROW_1	0
 #define ROW_2	4
 #define CLEAR_DISPLAY					0x01	//0000 0001
+
+#define SET_ADDRESS(a,b)			(0x80 + (a) + (b) * 0x40)
 
 
 //Inicializa el FTDI y el LCD 
@@ -65,8 +68,8 @@ void lcdWriteDR(FT_HANDLE * deviceHandler, BYTE valor);
 //La primera función escribe directamente un nibble al display.Por ejemplo :
 //lcdWriteNibble(deviceHandler, LCD_RS | LCD_D6);
 
-//void lcdWriteNibble(FT_HANDLE * deviceHandler, BYTE value, BYTE RS); NUESTRA
-void lcdWriteNibble(FT_HANDLE * deviceHandler, BYTE value); //AGUSTIN
+void lcdWriteNibble(FT_HANDLE * deviceHandler, BYTE value, BYTE RS); //NUESTRA
+//void lcdWriteNibble(FT_HANDLE * deviceHandler, BYTE value); //AG
 
 //Escribe el byte recibido al display.Si utilizamos el modo 4 bits
 //deberemos realizar dos llamadas a lcdWrietNibble(); por lo que la primera función será

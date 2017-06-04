@@ -15,20 +15,56 @@ int main()
 
 
 	LCD lcd;
-	lcd << 'a';
-	Sleep(3);
-	lcd << 'b';
-	Sleep(3);
-	lcd << 'c';
-	Sleep(3);
-	lcd << 'd';
-	Sleep(3);
-	lcd << 'e';
-	Sleep(3);
-	lcd << 'f';
-	Sleep(3);
-	lcd << 'g';
-	lcd.lcdClear();
+
+	const unsigned char str[] = "   HOLA, EN EDA no ANDA NADA";
+	lcd << str;
+
+
+	//lcd << 'a';
+	//Sleep(3);
+	//lcd << 'b';
+	//Sleep(3);
+	//lcd << 'c';
+	//Sleep(3);
+	//lcd << 'd';
+	//Sleep(3);
+	//lcd << 'e';
+	//Sleep(3);
+	//lcd << 'f';
+	//Sleep(3);
+	//lcd << 'g';
+	//Sleep(3);
+	//lcd << 'a';
+	//Sleep(3);
+	//lcd << 'b';
+	//Sleep(3);
+	//lcd << 'c';
+	//Sleep(3);
+	//lcd << 'd';
+	//Sleep(3);
+	//lcd << 'e';
+	//Sleep(3);
+	//lcd << 'f';
+	//Sleep(3);
+	//lcd << 'g';
+	//Sleep(3);
+	//lcd << 'a';
+	//Sleep(3);
+	//lcd << 'b';
+	//Sleep(3);
+	//lcd << 'c';
+	//Sleep(3);
+	//lcd << 'd';
+	//Sleep(3);
+	//lcd << 'e';
+	//Sleep(3);
+	//lcd << 'f';
+	//Sleep(3);
+	//lcd << 'g';
+
+
+
+	//lcd.lcdClear();
 	//lcd << "Hola" << " " << "Mundo";
 
 	//FT_HANDLE  deviceHandler;

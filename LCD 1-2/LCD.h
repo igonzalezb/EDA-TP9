@@ -38,5 +38,5 @@ public:
 
 private:
 	FT_HANDLE deviceHandler;
-	void escritura(const unsigned char c);
+	//void escritura(const unsigned char c);
 };
