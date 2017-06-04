@@ -7,11 +7,12 @@ LCD::LCD()
 	cadd = 1;
 	lcdInitOk();
 	lcdClear();
+
 }
 
 LCD::~LCD()
 {
-
+	FT_Close(deviceHandler);
 }
 
 bool LCD::lcdInitOk()
@@ -23,6 +24,11 @@ bool LCD::lcdInitOk()
 		if (deviceHandler != 0)
 			found = true;
 	}
+
+	const unsigned char str[] = "   ";
+	*this << str;
+	//lcdClear(); 
+
 	return found;
 }
 
@@ -57,8 +63,7 @@ bool LCD::lcdClearToEOL()
 	int _cadd = cadd;
 	for (int i = (cadd % MAX_POSITION); i<= MAX_POSITION; i++)  //cheaquear que este bien 
 	{
-
-		//escritura(' ');
+		*this << ' ';
 	}
 	cadd = _cadd;
 	lcdUpdateCursor();
