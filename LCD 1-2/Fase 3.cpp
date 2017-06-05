@@ -21,7 +21,7 @@ void mainFase3(int argc, char * argv[])
 		readFileToBuffer(P, fp, buffer);
 
 
-		getchar();
+		getchar();		//Para Debug
 
 	}
 

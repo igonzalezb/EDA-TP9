@@ -27,8 +27,7 @@ string formatDate(string d)
 	string _date;
 	char * month[12] = { "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" };
 
-	size_t position = d.find_first_of(' ');
-	position++;
+	size_t position = 5;
 	_date = d.substr(position, 2);
 	_date.append("/");
 	//TENGO DD/
