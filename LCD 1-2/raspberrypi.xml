@@ -17,7 +17,7 @@
 	<sy:updatePeriod>hourly</sy:updatePeriod>
 	<sy:updateFrequency>1</sy:updateFrequency>
 	<generator>https://wordpress.org/?v=4.7.5</generator>
-	<item>
+	        <item>
 		<title>Windows 98 Watch</title>
 		<link>https://www.raspberrypi.org/magpi/windows-98-watch/</link>
 		<comments>https://www.raspberrypi.org/magpi/windows-98-watch/#disqus_thread</comments>
@@ -776,7 +776,7 @@ glslLoader https://thebookofshaders.com/10/ikeda-04.frag</pre><p></p>
 			<wfw:commentRss>https://www.raspberrypi.org/magpi/papirus-zero-epaper-review/feed/</wfw:commentRss>
 		<slash:comments>0</slash:comments>
 		</item>
-	</channel>
+</channel>
 </rss>
 
 <!-- Dynamic page generated in 0.874 seconds. -->

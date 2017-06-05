@@ -49,12 +49,12 @@
 
 
 #include <iostream>
-#include "LCD.h"
+//#include "LCD.h"
+#include "Fase 3.h"
 
-
-int main()
+int main(int argc, char * argv[])
 {
-	LCD lcd;
+	/*LCD lcd;
 
 	const unsigned char str1[] = "Finalmente ANDA."; 
 	lcd << str1;
@@ -66,7 +66,11 @@ int main()
 	lcd.lcdClear();
 	lcd.lcdMoveCursorDown();
 	const unsigned char str3[] = "chau ;)";
-	lcd << str3;
+	lcd << str3;*/
+
+	mainFase3(argc, argv);
+
+
 
 	getchar();
 
