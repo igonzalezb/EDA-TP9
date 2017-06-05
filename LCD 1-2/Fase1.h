@@ -38,20 +38,9 @@ typedef uint8_t BYTE;
 #define LCD_E		(1 << PORT_P0)	
 
 
-
-#define LED_ROJO	(1 << PORT_P0)    
-#define LED_VERDE	(1 << PORT_P7) 
-#define MASK_LEDS	(LED_ROJO | LED_VERDE)		//MASK_LEDS = 1000 0001   
-#define NOT_MASK_LEDS	~(MASK_LEDS)			//NOT_MASK_LEDS = 0111 1110
-
-
 // Hardware not inverted (active high) 
 #define LCD_RS_ON	(LCD_RS) 
 #define LCD_RS_OFF	(LCD_RS ^ LCD_RS)
-
-// Hardware inverted (active low) 
-#define LCD_TEST_ON	(LCD_TEST ^ LCD_TEST)  
-#define LCD_TEST_OFF	(LCD_TEST)
 
 #define LCD_SET_DDRAM	0x80
 
@@ -62,8 +51,6 @@ typedef uint8_t BYTE;
 #define ROW_2			4
 
 #define SET_ADDRESS(a,b)	(0x80 + (a) + (b) * 0x40)
-
-
 
 
 //Inicializa el FTDI y el LCD 
