@@ -68,6 +68,8 @@ int main(int argc, char * argv[])
 	const unsigned char str3[] = "chau ;)";
 	lcd << str3;*/
 
+
+	//Testing XML
 	mainFase3(argc, argv);
 
 
