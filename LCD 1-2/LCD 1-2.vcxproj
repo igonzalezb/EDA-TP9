@@ -89,11 +89,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Fase 3.cpp" />
     <ClCompile Include="Fase1.cpp" />
     <ClCompile Include="LCD.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Fase 3.h" />
     <ClInclude Include="Fase1.h" />
     <ClInclude Include="Fase2.h" />
     <ClInclude Include="ftd2xx.h" />
