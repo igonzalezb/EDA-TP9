@@ -1,0 +1,783 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>The MagPi Magazine</title>
+	<atom:link href="https://www.raspberrypi.org/magpi/feed/?post_type%5B0%5D=issues&#038;post_type%5B1%5D=post" rel="self" type="application/rss+xml" />
+	<link>https://www.raspberrypi.org/magpi</link>
+	<description>The official Raspberry Pi magazine</description>
+	<lastBuildDate>Mon, 05 Jun 2017 11:28:11 +0000</lastBuildDate>
+	<language>en-GB</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.7.5</generator>
+	<item>
+		<title>Windows 98 Watch</title>
+		<link>https://www.raspberrypi.org/magpi/windows-98-watch/</link>
+		<comments>https://www.raspberrypi.org/magpi/windows-98-watch/#disqus_thread</comments>
+		<pubDate>Mon, 05 Jun 2017 11:28:11 +0000</pubDate>
+		<dc:creator><![CDATA[Russell Barnes]]></dc:creator>
+				<category><![CDATA[Projects]]></category>
+		<category><![CDATA[microsoft]]></category>
+		<category><![CDATA[smart watch]]></category>
+		<category><![CDATA[wearable]]></category>
+		<category><![CDATA[windows]]></category>
+
+		<guid isPermaLink="false">https://www.raspberrypi.org/magpi/?p=4359</guid>
+		<description><![CDATA[<p>Wind back the clock with this chunky wristwatch</p>
+<p>The post <a rel="nofollow" href="https://www.raspberrypi.org/magpi/windows-98-watch/">Windows 98 Watch</a> appeared first on <a rel="nofollow" href="https://www.raspberrypi.org/magpi">The MagPi Magazine</a>.</p>
+]]></description>
+				<content:encoded><![CDATA[<p>If Microsoft had designed a smartwatch back in the late Nineties, it might have looked something like this! Michael Darby, aka 314reactor, has built a chunky, Pi-powered wristwatch running the Windows 98 operating system.</p>
+<p>While he admits the ancient OS used to drive him mad back in the day, he has an odd nostalgia for it. “Many years later you look back on it and want to relive it. I think time has a funny way of keeping more of the good than the bad within memory.”</p>
+<p><em>The full article can be found in <a href="/magpi/issues/magpi/57">The MagPi 57</a> and was written by Phil King.</em></p>
+<p>Once he’d accrued the required components, including a Raspberry Pi Model A+, it only took a few hours to put together. There’s a <a href="https://314reactor.com/2017/03/01/windows-98-wrist-watch/">tutorial on his site</a> you can follow.</p>
+<div id="attachment_4361" style="width: 1290px" class="wp-caption aligncenter"><img src="https://www.raspberrypi.org/magpi/wp-content/uploads/2017/06/step01-Pi-with-spacers.jpg" alt="" width="1280" height="960" class="size-full wp-image-4361" /><p class="wp-caption-text">The hardware is simply an A+ with some extras</p></div>
+<p>The Pi A+ sits in the bottom of an Adafruit Pi Protector case with a PiTFT 2.4‑inch HAT touchscreen on top. Five tactile buttons have been added to the latter, although only one is currently used – to shut down the system cleanly. The watch is powered by a slimline LiPo battery connected via a PowerBoost 500 with switch, while Velcro feet secure the watch body to a wrist strap.</p>
+<h3>Emulated watches</h3>
+<p>Emulation is employed to get Windows 98 working on the watch, using the QEMU hypervisor running in Raspbian. “Its relatively simple,” says Michael. “Once you’ve set up a QEMU environment on another PC and installed Windows 98 to it, it’s a case of dragging the virtual hard drive file over to the Pi and running it there.”</p>
+<p>When the Windows 98 system eventually boots, it really does work, although Michael admits it’s too slow to be usable and touchscreen navigation is tricky. “I need to look into calibration, I think, or it could be an issue with the way QEMU works when launched from the command line.”</p>
+<div id="attachment_4362" style="width: 1385px" class="wp-caption aligncenter"><img src="https://www.raspberrypi.org/magpi/wp-content/uploads/2017/06/Windows_watch.jpg" alt="" width="1375" height="1500" class="size-full wp-image-4362" /><p class="wp-caption-text">Whoever thought you&#8217;d ever think about Windows 98 again?</p></div>
+<p>Even so, Michael is eventually hoping to get classic 3D shooter Doom running on the watch, once he’s overcome a technical issue: “I can’t find a way to create a virtual graphics card on QEMU on the Pi that will allow Windows 98 to run in 8-bit colour.”</p>
+<h3>Windows 2000</h3>
+<p>While Michael has considered using a Pi Zero for the watch, he has a different plan for an upgraded version: “It could be made marginally slimmer with a Pi Zero and it would give a bit of a speed boost… I am thinking of going the other way, though, and using a Pi 3 in future.” Although this would be even bulkier, it would run a lot faster as the Pi 3 handles emulation far better. “I can potentially put a bigger screen on and have multiple operating systems selectable from the buttons, such as 95, XP, and even something out there like ReactOS or some random Linux distro.”</p>
+<p>In the meantime, Michael has received plenty of positive feedback for his Windows 98 Watch, which he wore to Raspberry Pi’s Fifth Birthday Bash. “The reaction has been crazy; I never expected it to take off like it did, but I’m very happy it did and it has inspired me to create more and work harder.”</p>
+<p>The post <a rel="nofollow" href="https://www.raspberrypi.org/magpi/windows-98-watch/">Windows 98 Watch</a> appeared first on <a rel="nofollow" href="https://www.raspberrypi.org/magpi">The MagPi Magazine</a>.</p>
+]]></content:encoded>
+			<wfw:commentRss>https://www.raspberrypi.org/magpi/windows-98-watch/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>WD PiDrive Node Zero review</title>
+		<link>https://www.raspberrypi.org/magpi/wd-pidrive-node-zero-review/</link>
+		<comments>https://www.raspberrypi.org/magpi/wd-pidrive-node-zero-review/#disqus_thread</comments>
+		<pubDate>Sun, 04 Jun 2017 14:22:49 +0000</pubDate>
+		<dc:creator><![CDATA[Russell Barnes]]></dc:creator>
+				<category><![CDATA[Reviews]]></category>
+		<category><![CDATA[node]]></category>
+		<category><![CDATA[pi zero]]></category>
+		<category><![CDATA[pidrive]]></category>
+		<category><![CDATA[wd]]></category>
+
+		<guid isPermaLink="false">https://www.raspberrypi.org/magpi/?p=4352</guid>
+		<description><![CDATA[<p>A custom low-energy hard drive coupled with a Pi Zero</p>
+<p>The post <a rel="nofollow" href="https://www.raspberrypi.org/magpi/wd-pidrive-node-zero-review/">WD PiDrive Node Zero review</a> appeared first on <a rel="nofollow" href="https://www.raspberrypi.org/magpi">The MagPi Magazine</a>.</p>
+]]></description>
+				<content:encoded><![CDATA[<p>The WD PiDrive Node Zero is a clever all-in-one unit that combines a 314GB WD PiDrive with a Raspberry Pi Zero board.</p>
+<p>The PiDrive is WD’s low-energy hard drive, designed specifically for the Raspberry Pi. It replaces the regular SATA III port with a micro-USB connection.</p>
+<p>What we have here is a PiDrive in a plastic caddy with a mounted Pi Zero board. The PiDrive Node Zero caddy provides two additional full-sized USB ports, making it easier to hook up a keyboard without requiring a mini-USB adapter, but you still need a mini-HDMI to HDMI adapter.</p>
+<p>The PiDrive is a custom-engineered WD hard drive that is more power efficient than a standard storage drive.</p>
+<p>Included is a 4GB micro SD card preloaded with a custom version of NOOBS. When you first power on the PiDrive Node Zero, you install Raspbian onto the primary hard drive. The SD card boots the device, but you run it from the hard drive (so you don’t need to juggle the two drives).</p>
+<p>You can perhaps think of it as a super-smart hard drive with built-in computing functionality, or you could regard it as a Pi Zero with super-sized storage space. Either way, it’s an intriguing all-in-one unit that gets you thinking about usage.</p>
+<p>WD suggests that it’s “ideal for video recording, data logging, offline analytics, and applications where stand-alone operations are needed because of network limitations or privacy/security restrictions.”</p>
+<p>There’s some merit to all of these applications, but getting the PiDrive Node Zero on to a network opens up a much broader range of potential uses.</p>
+<h3>Benchmarking the WD PiDrive Node Zero</h3>
+<p><img class="aligncenter size-full wp-image-4354" src="https://www.raspberrypi.org/magpi/wp-content/uploads/2017/06/PiDrive2.jpg" alt="PiDrive Zero Node" width="550" height="367" /></p>
+<p>The WD PiDrive Node isn’t as fast as WD’s USB flash drive offering (see ‘Related’). We did a buffered test with the hdparm tool: hdparm -t /dev/sda. We ran the test three times and got an average of 28.15 MB/sec.</p>
+<p>Next, we ran a timed cached test using hdparm -T /dev/sda. Our average speed was 245.37 MB/sec. Neither speed will set the world alight, but we’re not sure this is problematic. Most of our imagined uses for the drive are as nodes on a system, set up to perform a task and tick away at it.</p>
+<h3>Networking with the PiDrive Node Zero</h3>
+<p>The Pi Zero lacks built-in wireless networking, unlike the newer Pi Zero W.</p>
+<p>You have a few options for taking a PiDrive Node Zero online. Add a USB-to-Ethernet adapter for hook-up to a wired network, or use a USB wireless networking dongle for access to WiFi.</p>
+<p>It is physically possible to remove the Pi Zero from the caddy (using a Torx screwdriver) and slot in a Pi Zero W. You’ll need to download the latest version of the PiDrive Foundation software (currently in beta) from the <a href="http://magpi.cc/2ns5lnA">WD Labs website</a>.</p>
+<p>Once on a network, the Node Zero is ideal for DIY projects like a mini-DLNA and Samba file server, mobile backup device, a media device, or music box. There are reports of folks using it to create Bitcoin nodes.</p>
+<p>In fact, it’s ideal for any task that requires a little processing power, with minimal energy draw and a decent amount of storage. There’s nothing here that you couldn’t hack together with Pi Zero, a few adapters and an external hard drive, but the self-contained unit makes it ideal for setting up and tucking it away in your house somewhere. WD also sells a Node Zero Enclosure for £8 that turns it into a neater unit.</p>
+<h3>Last word</h3>
+<p>4/5<br />
+A neat, all-in-one unit that combines Pi Zero computing with hard drive storage. We&#8217;d rather it packed the newer Pi Zero W, but it remains a charming and handy piece of kit.</p>
+<p>&nbsp;</p>
+<p>The post <a rel="nofollow" href="https://www.raspberrypi.org/magpi/wd-pidrive-node-zero-review/">WD PiDrive Node Zero review</a> appeared first on <a rel="nofollow" href="https://www.raspberrypi.org/magpi">The MagPi Magazine</a>.</p>
+]]></content:encoded>
+			<wfw:commentRss>https://www.raspberrypi.org/magpi/wd-pidrive-node-zero-review/feed/</wfw:commentRss>
+		<slash:comments>2</slash:comments>
+		</item>
+		<item>
+		<title>Touch pHAT review</title>
+		<link>https://www.raspberrypi.org/magpi/touch-phat-review/</link>
+		<comments>https://www.raspberrypi.org/magpi/touch-phat-review/#disqus_thread</comments>
+		<pubDate>Sat, 03 Jun 2017 12:00:23 +0000</pubDate>
+		<dc:creator><![CDATA[Russell Barnes]]></dc:creator>
+				<category><![CDATA[Reviews]]></category>
+		<category><![CDATA[hat]]></category>
+		<category><![CDATA[pi zero]]></category>
+		<category><![CDATA[touch]]></category>
+
+		<guid isPermaLink="false">https://www.raspberrypi.org/magpi/?p=4349</guid>
+		<description><![CDATA[<p>An easy way to add button and touch inputs to your projects</p>
+<p>The post <a rel="nofollow" href="https://www.raspberrypi.org/magpi/touch-phat-review/">Touch pHAT review</a> appeared first on <a rel="nofollow" href="https://www.raspberrypi.org/magpi">The MagPi Magazine</a>.</p>
+]]></description>
+				<content:encoded><![CDATA[<p>Need to add some button controls to a project you’re making? Pimoroni’s <a href="https://shop.pimoroni.com/products/touch-phat">Touch pHAT</a> makes it easy.</p>
+<p>This Pi Zero-sized board boasts six touch-sensitive buttons which light up when pressed; white LEDs located on the underside produce a yellow/green glow through the translucent board sections.</p>
+<p>While the buttons are marked A, B, C, D, Back, and Enter (and referred to as such when coding), each has a large white area for custom labelling with a sticker or dry-wipe marker.</p>
+<p>The pHAT is supplied with a female header which you’ll need to solder in place. While the board has a Pi Zero form factor, it can be used with any 40-pin Pi model.</p>
+<p>Equipped with a CAP1166 capacitive touch and LED driver chip, it uses I2C for communication, and therefore requires only two GPIO pins. No standoffs are supplied,  but you may want to add some to keep the pHAT rock steady on top of the Pi as you press the buttons. Alternatively, you could combine it with Pimoroni’s neat-looking Pibow Zero W case.</p>
+<h3>Touch Python</h3>
+<p>Like most Pimoroni add-ons, the Touch pHAT has its own Python library, which is easily installed – along with any missing dependencies – using a single Terminal command. A couple of examples are supplied: a simple button-press demo and a GUI app launcher.</p>
+<p>The code syntax is simple enough, using on_press and on_release events to register the relevant touch actions. It’s then completely up to you as to what these will trigger.</p>
+<p>Possible uses for the Touch pHAT include as a control panel for a robot, a remote control for home automation, a drum machine / mini piano, and a simon game.</p>
+<p>Most importantly, the buttons are very responsive to touch and will stay triggered/lit until released; you can press as many as you like simultaneously, too. They can even be activated through a thin transparent layer if needed. Note that if you wanted to attach alligator clips to the buttons to attach remote triggers (such as pieces of fruit), you’d have to scrape down to the copper on each button to make the connection work.</p>
+<h3>Last word</h3>
+<p>4/5</p>
+<p>The Touch pHAT makes it a lot easier to add input buttons to projects, instead of having to wire up push-buttons individually. What you use it for is completely up to you, but the touch-sensitive buttons are really responsive and the light-up effect is a nice bonus.</p>
+<p>The post <a rel="nofollow" href="https://www.raspberrypi.org/magpi/touch-phat-review/">Touch pHAT review</a> appeared first on <a rel="nofollow" href="https://www.raspberrypi.org/magpi">The MagPi Magazine</a>.</p>
+]]></content:encoded>
+			<wfw:commentRss>https://www.raspberrypi.org/magpi/touch-phat-review/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>Samba: Set up a Raspberry Pi as a File Sever for your local network</title>
+		<link>https://www.raspberrypi.org/magpi/samba-file-server/</link>
+		<comments>https://www.raspberrypi.org/magpi/samba-file-server/#disqus_thread</comments>
+		<pubDate>Fri, 02 Jun 2017 11:14:45 +0000</pubDate>
+		<dc:creator><![CDATA[Russell Barnes]]></dc:creator>
+				<category><![CDATA[Step by Step]]></category>
+		<category><![CDATA[files]]></category>
+		<category><![CDATA[networking]]></category>
+		<category><![CDATA[samba]]></category>
+
+		<guid isPermaLink="false">https://www.raspberrypi.org/magpi/?p=4341</guid>
+		<description><![CDATA[<p>Turn your Raspberry Pi into a Samba file server to back up and share content from anywhere on your local network</p>
+<p>The post <a rel="nofollow" href="https://www.raspberrypi.org/magpi/samba-file-server/">Samba: Set up a Raspberry Pi as a File Sever for your local network</a> appeared first on <a rel="nofollow" href="https://www.raspberrypi.org/magpi">The MagPi Magazine</a>.</p>
+]]></description>
+				<content:encoded><![CDATA[<p>It’s easy to use a Pi as a Samba file server where you can store backups and share files from all the other computers on your network.</p>
+<p>Samba is the Linux implementation of the SMB/CIFS file sharing standard used by Windows PCs and Apple computers, and widely supported by media streamers, games consoles and mobile apps.</p>
+<p>This tutorial assumes that you’ll use a keyboard, mouse, and monitor to set up your file server, but you can alternatively <a href="http://magpi.cc/1GULmTr">enable SSH</a> and connect to it remotely from another computer on your local network.</p>
+<p>We also assume you’re using a 32GB (or smaller) micro SD card, which provides a reasonable amount of storage space without requiring any extra steps to make it accessible. However, if you need extra storage, it’s easy to mount a large external USB drive and create a Samba entry for it.</p>
+<p>Alternatively, if you want to keep things compact, you can install Raspbian on micro SD cards of up to 256GB, although we suggest checking online (<a href="http://magpi.cc/2q97aGO">non-working SD cards</a>) before you buy to make sure you get one that’s fully compatible with the Raspberry Pi.</p>
+<p>Once set up, you can mount your home file server on all the other computers on your network, and use it as a convenient place to store everything from music files you want to share with your housemates, to backups of important documents and save-game files you’d like to share between computers.</p>
+<p>We recommend using a wired Ethernet connection for stability and fast transfer speeds. The project will still work if you connect your Pi via WiFi, although performance will be affected, particularly when it comes to copying over large files.</p>
+<h3>File Server: Set up Samba</h3>
+<p>Download <a href="http://magpi.cc/2bnf5XF">the latest version of NOOBS</a> and copy it to a blank micro SD card that’s been formatted as fat32. Plug the micro SD card into your Pi, boot it up and opt to install Raspbian with a PIXEL desktop.</p><pre class="crayon-plain-tag">Install Samba</pre><p>&nbsp;</p>
+<p>Samba is available in Raspbian’s standard software repositories. We’re going to update our repository index, make sure our operating system is fully updated, and install Samba using apt-get. Open a Terminal and type:</p><pre class="crayon-plain-tag">sudo apt-get update
+
+sudo apt-get upgrade
+
+sudo apt-get install samba samba-common-bin</pre><p><strong>Create your shared directory</strong></p>
+<p>We’re going to create a dedicated shared directory on our Pi’s micro SD hard disk. You can put it anywhere, but ours will be at the top level of the root file system.</p><pre class="crayon-plain-tag">sudo mkdir -m 1777 /share</pre><p>This command sets the sticky bit (1) to help prevent the directory from being accidentally deleted and gives everyone read/write/execute (777) permissions on it.</p>
+<p><strong>Configure Samba to share your new directory</strong></p>
+<p><img class="aligncenter size-full wp-image-4345" src="https://www.raspberrypi.org/magpi/wp-content/uploads/2017/06/samba_config.jpg" alt="Samba Config files" width="550" height="403" /></p>
+<p>Edit Samba’s config files to make the file share visible to the Windows PCs on the network.</p><pre class="crayon-plain-tag">sudo leafpad /etc/samba/smb.conf</pre><p>In our example, you’ll need to add the following entry:</p><pre class="crayon-plain-tag">[share]
+Comment = Pi shared folder
+Path = /share
+Browseable = yes
+Writeable = Yes
+only guest = no
+create mask = 0777
+directory mask = 0777
+Public = yes
+Guest ok = yes</pre><p>This means that anyone will be able to read, write, and execute files in the share, either by logging in as a Samba user (which we’ll set up below) or as a guest. If you don’t want to allow guest users, omit the guest ok = yes line.</p>
+<p>You could also use Samba to share a user’s home directory so they can access it from elsewhere on the network, or to share a larger external hard disk that lives at a fixed mount point. Just create a smb.conf entry for any path you want to share, and it’ll be made available across your network when you restart Samba.</p>
+<p><strong>Create a user and start Samba</strong></p>
+<p>&nbsp;</p>
+<p>Before we start the server, you’ll want to set a Samba password &#8211; this is not the same as your standard default password (raspberry), but there’s no harm in reusing this if you want to, as this is a low-security, local network project.</p><pre class="crayon-plain-tag">sudo smbpasswd -a pi</pre><p>Then set a password as prompted. Finally, let’s restart Samba:</p><pre class="crayon-plain-tag">sudo /etc/init.d/samba restart</pre><p>From now on, Samba will start automatically whenever you power on your Pi. Once you’ve made sure that you can locate your shared folder on the network, you can safely disconnect the mouse, monitor, and keyboard from your Pi and just leave it running as a headless file server.</p>
+<p><strong>Find your Pi on the network</strong></p>
+<p>You’ll now be able to find your Raspberry Pi file server (named RASPBERRYPI by default) from any device on your local network. If you’ve left smb.conf’s default settings as they are, it will appear in a Windows network workgroup called WORKGROUP.</p>
+<p><img class="aligncenter size-full wp-image-4346" src="https://www.raspberrypi.org/magpi/wp-content/uploads/2017/06/Pi-Zero-Case.jpg" alt="Pi-Zero-Case" width="550" height="367" /></p>
+<p>The post <a rel="nofollow" href="https://www.raspberrypi.org/magpi/samba-file-server/">Samba: Set up a Raspberry Pi as a File Sever for your local network</a> appeared first on <a rel="nofollow" href="https://www.raspberrypi.org/magpi">The MagPi Magazine</a>.</p>
+]]></content:encoded>
+			<wfw:commentRss>https://www.raspberrypi.org/magpi/samba-file-server/feed/</wfw:commentRss>
+		<slash:comments>5</slash:comments>
+		</item>
+		<item>
+		<title>Tiny 4WD Robot Rover: new Pi Zero robotics kit from Pi Wars designer</title>
+		<link>https://www.raspberrypi.org/magpi/tiny-4wd-robot-rover/</link>
+		<comments>https://www.raspberrypi.org/magpi/tiny-4wd-robot-rover/#disqus_thread</comments>
+		<pubDate>Thu, 01 Jun 2017 13:51:58 +0000</pubDate>
+		<dc:creator><![CDATA[Russell Barnes]]></dc:creator>
+				<category><![CDATA[News]]></category>
+		<category><![CDATA[motor]]></category>
+		<category><![CDATA[pi zero]]></category>
+		<category><![CDATA[pimoroni]]></category>
+		<category><![CDATA[robotics]]></category>
+
+		<guid isPermaLink="false">https://www.raspberrypi.org/magpi/?p=4333</guid>
+		<description><![CDATA[<p>The Tiny 4WD Robot Rober is a new Pi Zero kit built by Coretec Robotics</p>
+<p>The post <a rel="nofollow" href="https://www.raspberrypi.org/magpi/tiny-4wd-robot-rover/">Tiny 4WD Robot Rover: new Pi Zero robotics kit from Pi Wars designer</a> appeared first on <a rel="nofollow" href="https://www.raspberrypi.org/magpi">The MagPi Magazine</a>.</p>
+]]></description>
+				<content:encoded><![CDATA[<p>The Tiny 4WD Robot Rober is a new Pi Zero kit built by Coretec Robotics.</p>
+<p>Perennial Pi Wars champion Brian Corteil has partnered with Pimoroni to launch the £55 Tiny 4WD kit.</p>
+<p>The Tiny 4WD is close, but not identical, to Brian’s remote-controlled robot detailed in issue 51 of The MagPi. “The reason for the change to the Pimoroni pHAT,” Brian tells us, “was to get the price of the kit below £60. If a ZeroBorg was used, the kit would have been closer to £90 to £100.”</p>
+<h3>Tiny 4WD Robot Rover kit for Pi Zero</h3>
+<p><iframe width="500" height="281" src="https://www.youtube.com/embed/ViAUCtnt-JA?feature=oembed" frameborder="0" allowfullscreen></iframe></p>
+<p>The Explorer pHAT also “has buffered 5V inputs/outputs plus four analogue inputs, allowing a range of sensors to be added.”</p>
+<p>When selecting motors, Brian advises “the 50:1 ratio [motors] are a great choice for general use. A higher ratio, say 20:1, makes the robot into a more sporty model, [but] turning on the spot and climbing is not as good due to lower torque. For computer vision and sensors, the 298:1 motors are more suitable, due to the lower speed.”</p>
+<p>Emma Norling was lucky enough to win a Tiny 4WD kit recently and <a href="http://magpi.cc/2pXHCu8">shared her experience with it</a>. The kit is “really simple to put together, and nice and robust. I’ve had experience before with kits that are tricky to put together, but ultimately robust; or simple to put together but [of] poor build quality &#8211; this one wins on both counts.”</p>
+<p>You can buy the <a href="http://magpi.cc/2r8e7oS">CoreTec Tiny 4WD Robot Rover kit from Pimoroni</a> for £55.</p>
+<p><img class="aligncenter size-full wp-image-4336" src="https://www.raspberrypi.org/magpi/wp-content/uploads/2017/06/Tiny-4WD-Robot-Rover-1.jpg" alt="Tiny 4WD Robot Rover" width="550" height="452" /></p>
+<p>The post <a rel="nofollow" href="https://www.raspberrypi.org/magpi/tiny-4wd-robot-rover/">Tiny 4WD Robot Rover: new Pi Zero robotics kit from Pi Wars designer</a> appeared first on <a rel="nofollow" href="https://www.raspberrypi.org/magpi">The MagPi Magazine</a>.</p>
+]]></content:encoded>
+			<wfw:commentRss>https://www.raspberrypi.org/magpi/tiny-4wd-robot-rover/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>Tough Pi-ano</title>
+		<link>https://www.raspberrypi.org/magpi/tough-pi-ano/</link>
+		<comments>https://www.raspberrypi.org/magpi/tough-pi-ano/#disqus_thread</comments>
+		<pubDate>Wed, 31 May 2017 11:14:13 +0000</pubDate>
+		<dc:creator><![CDATA[Russell Barnes]]></dc:creator>
+				<category><![CDATA[Projects]]></category>
+		<category><![CDATA[instrument]]></category>
+		<category><![CDATA[keyboard]]></category>
+		<category><![CDATA[music]]></category>
+		<category><![CDATA[piano]]></category>
+
+		<guid isPermaLink="false">https://www.raspberrypi.org/magpi/?p=4328</guid>
+		<description><![CDATA[<p>Hammer the keys on this incredibly robust musical instrument</p>
+<p>The post <a rel="nofollow" href="https://www.raspberrypi.org/magpi/tough-pi-ano/">Tough Pi-ano</a> appeared first on <a rel="nofollow" href="https://www.raspberrypi.org/magpi">The MagPi Magazine</a>.</p>
+]]></description>
+				<content:encoded><![CDATA[<p><a href="http://www.24hourengineer.com/">Brian McEvoy</a> wanted to make a toughened electronic keyboard for his cousin, who has Down’s syndrome: “He loves music therapy but he breaks pianos on a weekly basis.” Brian’s aunt asked him to help with therapy devices for his cousin and other such kids. “The idea was exciting because there is a whole different mindset when designing for someone who will not handle things with gentle hands. These projects have to absorb damage without hurting anyone.”</p>
+<p><em>The full article can be found in <a href="/magpi/issues/magpi/57">The MagPi 57</a> and was written by Phil King.</em></p>
+<p>The result is the Tough Pi-ano. It has no exposed metal, and the keyboard area is covered with thick plastic. For its keys it uses arcade buttons, which are inexpensive and easy to replace. Each of four octaves is powered by a Pi Zero, with a USB sound card outputting the audio to an external amplifier and speakers.</p>
+<p>While Brian contemplated the Tough Pi-ano’s design for two years, it only took him a couple of weeks to build, putting his woodworking skills to good use. “Keeping everything simple was integral to making a solid structure.” Since the original design concept was for a perfect piano replica with easily replaceable octaves, he started crafting wooden piano keys. After experiencing too many problems, however, these were replaced with plastic arcade buttons. “In the end, arcade buttons were the best solution since they were easy to source and replace.”</p>
+<div id="attachment_4330" style="width: 1610px" class="wp-caption aligncenter"><img src="https://www.raspberrypi.org/magpi/wp-content/uploads/2017/05/step02-buttons.jpg" alt="" width="1600" height="900" class="size-full wp-image-4330" /><p class="wp-caption-text">You can see the construction beneath the Pi-ano</p></div>
+<p>Brian wrote a Python program using the Pygame library to read the arcade button presses and play WAV piano samples. While he considered adding a 3.5mm jack to each Pi Zero, he eventually opted to use cheap USB sound cards to output the audio. The biggest problem was electrical noise. “The first octave I built didn’t have any pull-up resistors on the keys so they were, of course, prone to floating. At that point, I had inadvertently built a touchless piano,” recalls Brian. 1K resistors were added to each input to solve the problem. “There is still some noise on the audio despite using a clean power supply and line filter. Maybe using $0.99 USB audio cards is to blame.”</p>
+<p>While Brian admits it would have been possible to use a single Raspberry Pi and remote I/O to power the piano, the use of one Pi Zero per octave has some benefits: “If any part was to break, it would be possible to shuffle working hardware around for a three-octave Tough Pi-ano, at least until repairs could be made. So there is still an advantage to the redundancy.”</p>
+<p>Brian’s Tough Pi-ano is now set to be used in his aunt and uncle’s new centre for local families with kids on the autism spectrum and those with Down’s syndrome. While he doesn’t plan to build another piano, he has some advice for would-be makers. “I would recommend building the speakers into the enclosure, but be sure to ventilate the amplifier. Also, buy one of the tools used to fasten arcade button washers, or you’ll regret it when you get to the 50th button and your knuckles are bloody.”</p>
+<p>The post <a rel="nofollow" href="https://www.raspberrypi.org/magpi/tough-pi-ano/">Tough Pi-ano</a> appeared first on <a rel="nofollow" href="https://www.raspberrypi.org/magpi">The MagPi Magazine</a>.</p>
+]]></content:encoded>
+			<wfw:commentRss>https://www.raspberrypi.org/magpi/tough-pi-ano/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>Add an off-switch to power down your Pi</title>
+		<link>https://www.raspberrypi.org/magpi/off-switch-raspberry-pi/</link>
+		<comments>https://www.raspberrypi.org/magpi/off-switch-raspberry-pi/#disqus_thread</comments>
+		<pubDate>Tue, 30 May 2017 10:33:10 +0000</pubDate>
+		<dc:creator><![CDATA[Russell Barnes]]></dc:creator>
+				<category><![CDATA[Walkthrough]]></category>
+		<category><![CDATA[mod]]></category>
+		<category><![CDATA[power off]]></category>
+		<category><![CDATA[shut down]]></category>
+
+		<guid isPermaLink="false">https://www.raspberrypi.org/magpi/?p=4324</guid>
+		<description><![CDATA[<p>Add a switch to your Raspberry Pi to safely shut it down without pulling the power</p>
+<p>The post <a rel="nofollow" href="https://www.raspberrypi.org/magpi/off-switch-raspberry-pi/">Add an off-switch to power down your Pi</a> appeared first on <a rel="nofollow" href="https://www.raspberrypi.org/magpi">The MagPi Magazine</a>.</p>
+]]></description>
+				<content:encoded><![CDATA[<p>To keep prices down, the Raspberry Pi is missing something that most electronic devices come with: a switch to turn it on and off. That’s OK, you say, we’ll just pull the plug to turn it off. Unfortunately, this can lead to corruption problems with the SD card. All the instructions say you should run the shutdown command before pulling the plug, but this is not always possible, particularly when your Raspberry Pi is running headless without a connected keyboard and monitor, and possibly even without a network connection. So, what can a self-respecting DIYer do? The answer, of course, is ‘add your own switch’!</p>
+<p><em>The full article can be found in <a href="/magpi/issues/magpi/57">The MagPi 57</a> and was written by Tony Hansen.</em></p>
+<p>Lots of articles are available to tell you how to use a breadboard to connect a button or LED to a Raspberry Pi’s GPIO pins. This article focuses on doing something useful with those switches and LEDs.<br />
+The safe off-switch is complementary to a reset switch, which is the best method for starting the Raspberry Pi up again. Issue 52 of The MagPi featured an excellent article on how to connect a reset button.</p>
+<h3>You&#8217;ll need</h3>
+<p>Momentary push button switches</p>
+<h3>Using GPIO Zero</h3>
+<p>With the GPIO Zero library, the Python code to deal with a button press becomes extremely simple. Assuming your button is connected between GPIO 21 and GND (ground), the code is nice and easy. You can download it from <a href="https://github.com/TonyLHansen/raspberry-pi-safe-off-switch/">the Git repo</a> as shutdown-press-simple.py.</p>
+<p>This code creates a button on GPIO 21, waits for it to be pressed, then executes the system command to power down the Raspberry Pi. GPIO 21 is nice because it’s on pin 40 of the 40-pin header and sits right next to a ground connection on pin 39. This combination makes it difficult for an off-switch to be plugged in incorrectly. On a 26-pin header, GPIO 7 is similarly situated at the bottom, on pin 26, next to pin 25’s ground connection.</p>
+<p>Create the script on your Raspberry Pi using your favorite text editor (e.g., nano, Vim or Emacs), as in:</p><pre class="crayon-plain-tag">$ nano ~pi/shutdown-press-simple.py</pre><p>Then add a line to the end of /etc/rc.local to run it at boot time:</p><pre class="crayon-plain-tag">$ sudo su
+# echo "~pi/shutdown-press-simple.py &amp;" &gt;&gt; /etc/rc.local</pre><p>Now, after rebooting, your script will be running and listening for a button (connected between GPIO 21 on pin 40 and ground) to be pushed.</p>
+<h3>Preventing accidental button pushes</h3>
+<p>One major drawback of the previous code is that any accidental push of the button will shut your Raspberry Pi down. It would be better if you needed to hold the button down for several seconds before everything powers down. Check out shutdown-with-hold.py.</p>
+<p>Instead of hard-coding the GPIO number 21 and the hold time, this code does a few things differently. First, it defines variables to hold these numbers at the top of the code. For a program this small, declaring the values at the top is not necessary, but it is good practice to declare any configurable variables near the top of the code. When making changes later, you won’t have to hunt through the code to find these variables. Secondly, it allows the GPIO number and hold time to be overridden on the command line, so that you can change them later without modifying the program.</p>
+<p>We then define a function named shutdown() to execute the poweroff system command. The button is also assigned to a variable for use in the next statement. This time, we are also specifying that the button must be held down, and when the hold time (6 seconds) has passed, any function assigned to the when_held event will be executed. We then assign that event to the shutdown() function we defined earlier. The call to pause() is needed to cause the script to wait for the button presses.</p>
+<p>If you look at the examples that come with the GPIO Zero source, you’ll find a script very similar called <a href="https://github.com/RPi-Distro/python-gpiozero/blob/master/docs/examples/button_shutdown.py">button_shutdown.py</a>.</p>
+<h3>Feedback while pressing the button</h3>
+<p>We can do better. The major thing lacking with the above code is any sort of feedback. It is hard to tell that anything is really happening while you have the button pressed down. Fortunately, GPIO Zero allows us to do much more with a button press, such as turning an LED on and off or setting it blinking, by attaching this to the button’s when_pressed event.</p>
+<p>We need to ensure that the LED is turned off if the button is not held down for the entire length of time. This can be accomplished by attaching to the when_released event.</p>
+<p>As before, the important work has been moved into functions named when_pressed(), when_released(), and the same shutdown() function we used before. These are assigned to their corresponding button events.</p>
+<h3>Going further</h3>
+<p>Can you think of other ways to provide feedback while pressing the hold button, or alternative ways to signal that it is time to turn off? How about using a buzzer, or popping up a message on a screen? You could also use the on-board activity LEDs, making them blink faster and faster as it gets closer to shutdown time. Or even play an audio clip, such as “I’m melting”. The GitHub repository contains additional examples such as these. How about watching the ‘low battery’ signal from a battery pack as a signal to shut down? Let your imagination run wild.</p>
+<p>Now, which of your projects are you going to add shutdown and reset buttons to?</p>
+<p>The post <a rel="nofollow" href="https://www.raspberrypi.org/magpi/off-switch-raspberry-pi/">Add an off-switch to power down your Pi</a> appeared first on <a rel="nofollow" href="https://www.raspberrypi.org/magpi">The MagPi Magazine</a>.</p>
+]]></content:encoded>
+			<wfw:commentRss>https://www.raspberrypi.org/magpi/off-switch-raspberry-pi/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>Joy Bonnet review</title>
+		<link>https://www.raspberrypi.org/magpi/joy-bonnet-review/</link>
+		<comments>https://www.raspberrypi.org/magpi/joy-bonnet-review/#disqus_thread</comments>
+		<pubDate>Sun, 28 May 2017 11:08:50 +0000</pubDate>
+		<dc:creator><![CDATA[Russell Barnes]]></dc:creator>
+				<category><![CDATA[Reviews]]></category>
+		<category><![CDATA[adafruit]]></category>
+		<category><![CDATA[games]]></category>
+		<category><![CDATA[retropie]]></category>
+
+		<guid isPermaLink="false">https://www.raspberrypi.org/magpi/?p=4313</guid>
+		<description><![CDATA[<p>Mount a joypad on your Pi Zero to get retro gaming</p>
+<p>The post <a rel="nofollow" href="https://www.raspberrypi.org/magpi/joy-bonnet-review/">Joy Bonnet review</a> appeared first on <a rel="nofollow" href="https://www.raspberrypi.org/magpi">The MagPi Magazine</a>.</p>
+]]></description>
+				<content:encoded><![CDATA[<p>Ever since its arrival, the tiny Pi Zero has been used for mini retro gaming projects, usually involving inserting one inside an old joypad. Adafruit’s <a href="https://shop.pimoroni.com/products/adafruit-joy-bonnet-for-raspberry-pi">Joy Bonnet</a> offers a much simpler, quicker route to pocket-sized retro gaming, however. Coming fully assembled, it simply stacks on top of your Raspberry Pi Zero. Naturally, you’ll need to solder (or hammer) a GPIO header to the latter first. A couple of plastic spacers and screws keep the Bonnet firmly in place – which is pretty essential as you’ll be pressing its buttons continuously and therefore pushing it down on the Pi. While it’s comfortable enough to hold in your hand, you may want to add the bottom of a Pi Zero case for extra comfort – although we had problems keeping the mini-HDMI display adapter fully inserted through the hole in an official case.</p>
+<p><em>The full article can be found in <a href="/magpi/issues/magpi/58">The MagPi 58</a> and was written by Phil King.</em></p>
+<p>You’re then ready to install a retro gaming OS. Adafruit recommends using <a href="retropie.org.uk">RetroPie</a> or <a href="http://emulationstation.org">Emulation Station</a> – just flash your microSD card as usual. With wireless set up, you can then SSH in and use a single command to install the Joy Bonnet Python library and software. It takes a little while and offers options to disable overscan (to remove the black border on some monitors) and install a gpio-halt utility for safe shutdown.</p>
+<p>Upon rebooting, the OS (we used RetroPie) should sense the Joy Bonnet. We were somewhat surprised to see it recognised as a keyboard: it turns out that the Bonnet’s buttons emulate keys such as Z, X, and ENTER. Another interesting point to note is that the mini joystick is actually analogue, although its directions produce cursor key presses – more on this later. Once you have assigned the various buttons and joystick directions to functions in RetroPie, you’re ready to play – naturally, you’ll need to have added a few game ROMs in the relevant system folders in RetroPie to make them appear in the on-screen menus.</p>
+<h3>Tiny buttons</h3>
+<p>We started off with a quick game of Galaga ’88 running on the MAME arcade emulator. Everything worked fine and the controls were responsive enough. Upon switching to Street Fighter II on SNES, however, we encountered a slight drawback. In place of L and R shoulder buttons, the Joy Bonnet has a couple of tiny buttons labelled 1 and 2, located in the middle of the top of the board – so not that easy to reach in the heat of battle. The four main buttons (X, Y, A, and B) worked well, although they’re far smaller than the ones on original joypads, so not that comfortable. While not quite so critical, the Select and Start buttons are the same small size.</p>
+<div id="attachment_4315" style="width: 1210px" class="wp-caption aligncenter"><img src="https://www.raspberrypi.org/magpi/wp-content/uploads/2017/05/Joy-Bonnet-in-hand.jpg" alt="" width="1200" height="900" class="size-full wp-image-4315" /><p class="wp-caption-text">The Joy Bonnet is incredibly small in the hand. Possibly too small.</p></div>
+<p>Next, we thought we’d have a blast with classic vertically scrolling shmup, 1942. Here we came across a bugbear that spoilt our enjoyment until we figured out a fix. As mentioned previously, the mini joystick is analogue but emulates digital presses, and we found it extremely difficult to obtain diagonal directions for our plane in the game. Fortunately, we managed to sort this out by editing the Joy Bonnet’s Python library and reducing the positive and negative thresholds for the analogue stick. Setting these at -300 and 300, rather than the original -600 and 600, we found the stick considerably more sensitive and were therefore able to obtain the diagonal directions. It’s also possible to edit the key presses produced by the buttons in this file, which might come in useful when playing a Spectrum or C64 game with unorthodox keyboard controls.</p>
+<p>Note that the Pi Zero is not capable of emulating more powerful consoles such as the N64 and PlayStation. You could always use the Joy Bonnet with a Raspberry Pi 3, although it wouldn’t exactly be handheld.</p>
+<h3>Last word</h3>
+<p>3/5</p>
+<p>Not as comfortable to hold or responsive as a regular game console joypad, the Joy Bonnet is unlikely to net you many high scores. Still, it is a cute concept that makes it easy to quickly get retro gaming on a Pi Zero: a neat portable solution that you can carry around with you to plug into any TV. You might want to invest in a longer HDMI cable so you don’t have to stand quite so close to the screen, though.</p>
+<p>The post <a rel="nofollow" href="https://www.raspberrypi.org/magpi/joy-bonnet-review/">Joy Bonnet review</a> appeared first on <a rel="nofollow" href="https://www.raspberrypi.org/magpi">The MagPi Magazine</a>.</p>
+]]></content:encoded>
+			<wfw:commentRss>https://www.raspberrypi.org/magpi/joy-bonnet-review/feed/</wfw:commentRss>
+		<slash:comments>3</slash:comments>
+		</item>
+		<item>
+		<title>Trophy Camera uses Raspberry Pi and AI to snap Award Winning photographs</title>
+		<link>https://www.raspberrypi.org/magpi/trophy-camera/</link>
+		<comments>https://www.raspberrypi.org/magpi/trophy-camera/#disqus_thread</comments>
+		<pubDate>Sat, 27 May 2017 11:45:56 +0000</pubDate>
+		<dc:creator><![CDATA[Russell Barnes]]></dc:creator>
+				<category><![CDATA[Projects]]></category>
+		<category><![CDATA[ai]]></category>
+		<category><![CDATA[camera module]]></category>
+
+		<guid isPermaLink="false">https://www.raspberrypi.org/magpi/?p=4320</guid>
+		<description><![CDATA[<p>This Trophy Camera only takes award-winning shots. With a Raspberry Pi inside, this camera uses AI to detect if shots captured are award-worthy.</p>
+<p>The post <a rel="nofollow" href="https://www.raspberrypi.org/magpi/trophy-camera/">Trophy Camera uses Raspberry Pi and AI to snap Award Winning photographs</a> appeared first on <a rel="nofollow" href="https://www.raspberrypi.org/magpi">The MagPi Magazine</a>.</p>
+]]></description>
+				<content:encoded><![CDATA[<p>The Trophy Camera uses AI to detect if photographs are award-winning. Two Belgian creatives have designed and made a camera that ‘can only make award-winning pictures’, thanks to an AI algorithm running on a Raspberry Pi.</p>
+<p>The Trophy Camera has been ‘trained’ to identify what makes an award-winning image by analysing all the previous winning entries for the World Press Photos of the Year. When you take a picture with the Trophy Camera, the camera is programmed to ‘recognise, make, and save only winning photos.’</p>
+<p>Intriguingly, the Trophy Camera doesn’t even have a viewscreen, merely a two-line readout that tells you whether the image you have taken is of award-winning standard or not. The project uses a Pi Zero W and the Camera Module v2.</p>
+<h3>Trophy Camera: Build an AI photography tool</h3>
+<p>Asked how the Trophy Camera works, Dries Depoorter, the engineer of the project, tells us, “Point the camera at your subject and press the red button… the LCD screen will then show what it sees in the form of labels, for example: inside, room, kitchen, blender. Then it will give the photograph a rating based on how much it looks like a World Press Photo winner. If the photograph has 90% of more correlation with the algorithm it has created based on the history of World Press Photo winners, it automatically uploads the picture to the website.”</p>
+<p>“The idea for the camera came from a concern for the development of repetitive visual and aesthetic strategies in photojournalism,” says Max Pinckers, the other half of the Trophy Camera team, who is currently researching tropes in photojournalism for his PhD at the School of Arts in Ghent. “Press photography appears to be becoming a self-referential medium dominated by tropes, archetypes, and pop-culture references.”</p>
+<p>The Trophy Camera, therefore, seems to be a tongue-in-cheek demonstration of the lack of creativity in what should be an intensely creative medium.</p>
+<p><img class="aligncenter size-full wp-image-4322" src="https://www.raspberrypi.org/magpi/wp-content/uploads/2017/05/Trophy-Camera-On-Show.jpg" alt="Trophy Camera On Show" width="550" height="367" /></p>
+<p>But can an AI algorithm discern arresting images from poor-quality ones? Dries tells us, “The technology in the camera searches for patterns in photographs and creates its own standards for evaluating them, but also functions on a deeper level that we humans cannot see or understand.”</p>
+<p>The Trophy Camera is described as ‘v0.9’, and Max has great plans for a future update: “I wanted to build the camera so it’s real-time and checks real-time [for] award-winning pictures. For the moment, you have to press a red trigger. The next version is going to be real-time.”</p>
+<p>He originally constructed the Trophy Camera with a Pi 2, “but then the new Raspberry Pi Zero W got released, and I ordered right away.” Fitting everything inside the case was tricky, “so the battery is really small… the biggest challenge was the software then the physical camera. I made it in ten days.”</p>
+<p>The Trophy Camera is on display in Tetem in The Netherlands until 30 July. More info (in Dutch) can found on the <a href="http://magpi.cc/2pXK6sw">Trophy Camera project&#8217;s website</a>.</p>
+<p>The post <a rel="nofollow" href="https://www.raspberrypi.org/magpi/trophy-camera/">Trophy Camera uses Raspberry Pi and AI to snap Award Winning photographs</a> appeared first on <a rel="nofollow" href="https://www.raspberrypi.org/magpi">The MagPi Magazine</a>.</p>
+]]></content:encoded>
+			<wfw:commentRss>https://www.raspberrypi.org/magpi/trophy-camera/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>Raspberry Pi and CoderDojo merge to bring digital making to more kids!</title>
+		<link>https://www.raspberrypi.org/magpi/raspberry-pi-coderdojo-merge/</link>
+		<comments>https://www.raspberrypi.org/magpi/raspberry-pi-coderdojo-merge/#disqus_thread</comments>
+		<pubDate>Fri, 26 May 2017 11:31:30 +0000</pubDate>
+		<dc:creator><![CDATA[Russell Barnes]]></dc:creator>
+				<category><![CDATA[News]]></category>
+		<category><![CDATA[codeclub]]></category>
+		<category><![CDATA[coderdojo]]></category>
+
+		<guid isPermaLink="false">https://www.raspberrypi.org/magpi/?p=4308</guid>
+		<description><![CDATA[<p>Two educational charities join forces to help teach more people how to code as the Raspberry Pi Foundation and CoderDojo Foundation merge</p>
+<p>The post <a rel="nofollow" href="https://www.raspberrypi.org/magpi/raspberry-pi-coderdojo-merge/">Raspberry Pi and CoderDojo merge to bring digital making to more kids!</a> appeared first on <a rel="nofollow" href="https://www.raspberrypi.org/magpi">The MagPi Magazine</a>.</p>
+]]></description>
+				<content:encoded><![CDATA[<p>The Raspberry Pi Foundation’s primary mission is to bring computer science and low-cost computing solutions to children. It’s why you see all the free resources on the Raspberry Pi website, free teacher training provided by the Foundation, and even The MagPi is provided for free as a PDF.</p>
+<p>To help in this mission, the Raspberry Pi has teamed up with CoderDojo. CoderDojos are coding clubs for kids aged seven to 17, poviding a safe, social space for young people to learn and share programming skills.</p>
+<p>As the goals of CoderDojo and Raspberry Pi align so well, it only made sense for the two to come together and do it better. They join CodeClub as part of the greater network of clubs and events that provide coding education to kids around the world.</p>
+<h3>Global effort</h3>
+<p>“Raspberry Pi and CoderDojo have each accomplished amazing things over the last six years.” Philip Colligan, CEO of the Raspberry Pi Foundation, said in the <a href="https://www.raspberrypi.org/blog/raspberry-pi-and-coderdojo-join-forces/">announcement blog</a>.</p>
+<p>&#8220;Now, we see an opportunity to do even more by joining forces. Bringing together Raspberry Pi, Code Club, and CoderDojo will create the largest global effort to get young people involved in computing and digital making. We have set ourselves an ambitious goal: to quadruple the number of CoderDojos worldwide, to 5,000, by the end of 2020.”</p>
+<p>Look out for more coverage of CoderDojo in future issues of The MagPi!</p>
+<p>The post <a rel="nofollow" href="https://www.raspberrypi.org/magpi/raspberry-pi-coderdojo-merge/">Raspberry Pi and CoderDojo merge to bring digital making to more kids!</a> appeared first on <a rel="nofollow" href="https://www.raspberrypi.org/magpi">The MagPi Magazine</a>.</p>
+]]></content:encoded>
+			<wfw:commentRss>https://www.raspberrypi.org/magpi/raspberry-pi-coderdojo-merge/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>Make with Minecraft Pi in The MagPi 58</title>
+		<link>https://www.raspberrypi.org/magpi/minecraft-aiy-magpi-58/</link>
+		<comments>https://www.raspberrypi.org/magpi/minecraft-aiy-magpi-58/#disqus_thread</comments>
+		<pubDate>Thu, 25 May 2017 10:59:08 +0000</pubDate>
+		<dc:creator><![CDATA[Russell Barnes]]></dc:creator>
+				<category><![CDATA[News]]></category>
+		<category><![CDATA[aiy projects]]></category>
+		<category><![CDATA[minecraft]]></category>
+
+		<guid isPermaLink="false">https://www.raspberrypi.org/magpi/?p=4303</guid>
+		<description><![CDATA[<p>We’re back with more amazing Minecraft Pi projects and more things to do with your AIY Voice Projects Kit</p>
+<p>The post <a rel="nofollow" href="https://www.raspberrypi.org/magpi/minecraft-aiy-magpi-58/">Make with Minecraft Pi in The MagPi 58</a> appeared first on <a rel="nofollow" href="https://www.raspberrypi.org/magpi">The MagPi Magazine</a>.</p>
+]]></description>
+				<content:encoded><![CDATA[<p>It&#8217;s been a busy month at The MagPi HQ but we’ve managed to put together a whole new magazine for you, with <a href="/magpi/issues/58/">issue 58 of the official Raspberry Pi magazine</a> out in stores today.</p>
+<div id="attachment_32688" style="width: 485px" class="wp-caption aligncenter"><a href="/magpi/issues/58"><img class="size-full wp-image-32688" src="https://www.raspberrypi.org/app/uploads/2017/05/58-Cover-MOCK.png" alt="The front cover of The MagPi 58" width="475" height="567" /></a><p class="wp-caption-text">The MagPi 58 features our latest Minecraft Pi hacks!</p></div>
+<h3>Minecraft Pi</h3>
+<p>The MagPi 58 is all about making with Minecraft Pi. We’ve got cool projects and hacks that let you take a selfie and display it in the Minecraft world, play music with Steve jumping on a giant piano, and use special cards to switch skins in an instant. It’s the perfect supplement to our <a href="/magpi/issues/essentials-minecraft-v1/">Hacking and Making in Minecraft</a> book!</p>
+<h3>AIY Voice Projects</h3>
+<p>It’s been great to see everyone getting excited over the last issue of the magazine, and we love seeing your pictures and videos of your <a href="/magpi/buy-aiy-projects-voice-kit/">AIY Voice projects</a>. In this issue we’ve included loads of ideas to keep you going with the AIY Projects kit. Don’t forget to send us what you’ve made on <a href="https://twitter.com/TheMagP1">Twitter</a>!</p>
+<div id="attachment_32044" style="width: 510px" class="wp-caption aligncenter"><img class="size-large wp-image-32044" src="https://www.raspberrypi.org/app/uploads/2017/05/Google-VoiceSim-Packaging-white-EDIT-copy-500x333.jpg" alt="Issue 57 of The MagPi, showing the Google AIY Voice Projects Kit" width="500" height="333" /><p class="wp-caption-text">Show us what you&#8217;ve made with your AIY Voice Projects Kit</p></div>
+<h3>The best of the rest in The MagPi 58</h3>
+<p>We’ve also got our usual selection of reviews, tutorials, and projects. This includes guides to making file servers and electronic instruments, along with our review of Adafruit’s Joy Bonnet handheld gaming kit.</p>
+<div id="attachment_4306" style="width: 1304px" class="wp-caption aligncenter"><img class="size-full wp-image-4306" src="https://www.raspberrypi.org/magpi/wp-content/uploads/2017/05/2017-05-25-11_40_38-.png" alt="" width="1294" height="914" /><p class="wp-caption-text">Learn how to start making GUIs</p></div>
+<p>You can grab the latest issue in stores in the UK right now, from WHSmith, Sainsburys, Asda, and Tesco. Copies will be arriving very soon in US stores, including Barnes &amp; Noble and Micro Center. You can also get a copy <a href="/magpi/buy-now/">online from our store</a>, or digitally via our <a href="https://play.google.com/store/apps/details?id=com.raspberry.magpi">Android</a> or <a href="https://itunes.apple.com/us/app/the-magpi-magazine/id972033560">iOS</a> app. Don’t forget, there’s always <a href="/magpi/issues/58/">the free PDF</a> as well.</p>
+<p>The post <a rel="nofollow" href="https://www.raspberrypi.org/magpi/minecraft-aiy-magpi-58/">Make with Minecraft Pi in The MagPi 58</a> appeared first on <a rel="nofollow" href="https://www.raspberrypi.org/magpi">The MagPi Magazine</a>.</p>
+]]></content:encoded>
+			<wfw:commentRss>https://www.raspberrypi.org/magpi/minecraft-aiy-magpi-58/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>AIY projects a huge success, how to buy a Voice Kit when it goes on sale?</title>
+		<link>https://www.raspberrypi.org/magpi/buy-aiy-projects-voice-kit/</link>
+		<comments>https://www.raspberrypi.org/magpi/buy-aiy-projects-voice-kit/#disqus_thread</comments>
+		<pubDate>Wed, 24 May 2017 11:15:05 +0000</pubDate>
+		<dc:creator><![CDATA[Russell Barnes]]></dc:creator>
+				<category><![CDATA[News]]></category>
+		<category><![CDATA[ai]]></category>
+		<category><![CDATA[aiy projects]]></category>
+		<category><![CDATA[google]]></category>
+		<category><![CDATA[The MagPi]]></category>
+
+		<guid isPermaLink="false">https://www.raspberrypi.org/magpi/?p=4287</guid>
+		<description><![CDATA[<p>Missed out on The MagPi #57? Get hold of an AIY Projects Voice Kit when it goes on sale</p>
+<p>The post <a rel="nofollow" href="https://www.raspberrypi.org/magpi/buy-aiy-projects-voice-kit/">AIY projects a huge success, how to buy a Voice Kit when it goes on sale?</a> appeared first on <a rel="nofollow" href="https://www.raspberrypi.org/magpi">The MagPi Magazine</a>.</p>
+]]></description>
+				<content:encoded><![CDATA[<p>Issue 57 of The MagPi proved so popular that people quickly resorted to asking staff to look under counters and in back rooms for spare copies to buy. The reason is our giveaway: a free AIY Projects Voice Kit developed by Google.</p>
+<p>If you missed the initial release of issue 57 and just want the exclusive AIY Projects Voice Kit on its own, you might be in luck. Raspberry Pi and Google are working to figure out a way to make the kits available in the longer term.</p>
+<p>If you’re interested in buying the AIY Projects Voice Kit, sign up for The MagPi newsletter:</p>
+<ol>
+<li>Open this link: <a href="http://magpi.cc/Email-me">magpi.cc/Email-me</a></li>
+<li>Enter your Email, First Name, Last Name.</li>
+<li>Click Subscribe to List.</li>
+</ol>
+<p>The AIY Projects Voice Kit was a free gift with issue 57, allowing you to add natural voice interactions to your projects easily and for free. The kit comprises an AIY Projects Voice HAT, a stereo microphone, large arcade-style button, and a selection of wires. In typical Google style, you make the case out of cardboard.</p>
+<p>Everybody who got a copy of the magazine seemed to love building the natural language recognizer.</p>
+<p>“I had fun building the #AIYProjects this weekend with my son,” tweeted The MagPi reader Stephen Keep. “It was his first electronics project.”</p>
+<p>“What a wonderful unexpected surprise,” said Simon Patterson.</p>
+<p>The magazine quickly sold out at WHSmith, Tesco, Sainsbury’s, and Asda. We hope you were one of the lucky ones who got a copy.</p>
+<p>The magazine was also available in the United States at Barnes &amp; Noble, Micro Center, and other stockists.</p>
+<p>“I picked up my copy of The MagPi last night,” said Brian Krohn‏ on Twitter. “Barnes &amp; Noble only had two copies left.”</p>
+<p>With copies quickly selling out, many readers wanted to know if the kit will be available on its own. “Where can I order one?” asked Will Bunker.</p>
+<h3>How to buy an AIY Projects Voice Kit when it goes on sale</h3>
+<p><img class="aligncenter size-full wp-image-4288" src="https://www.raspberrypi.org/magpi/wp-content/uploads/2017/05/The-MagPI-57.jpg" alt="The-MagPI-57" width="550" height="367" /></p>
+<p>&nbsp;</p>
+<p>We will email you if AIY Projects Voice Kit becomes available for purchase. Our newsletter is a good way to be the first to know about special issues of The MagPi.</p>
+<p>We can’t say for sure that the AIY Projects Voice Kit will be available for purchase, but we are pretty confident that a longer term solution can be found.</p>
+<p>Many people subscribe to <a href="http://magpi.cc/Subs1">The MagPi</a>, and these folks got the AIY Projects kit with their monthly issue. Sadly there are no AIY Projects kits left for new subscribers, we have sold out completely.</p>
+<p>Remember that subscribing to The MagPi is the best way to ensure you get special projects, like the Voice Kit, in future.</p>
+<p>Don’t forget: you also get a free Pi Zero W, case, and cable bundle with <a href="http://magpi.cc/Subs1">new 12-month subscriptions</a>.</p>
+<p><a href="magpi.cc/Subs1"><img class="aligncenter wp-image-3751 size-full" src="https://www.raspberrypi.org/magpi/wp-content/uploads/2017/03/Pi-Zero-W-case.jpg" alt="Pi Zero W official case" width="550" height="367" /></a></p>
+<p>The post <a rel="nofollow" href="https://www.raspberrypi.org/magpi/buy-aiy-projects-voice-kit/">AIY projects a huge success, how to buy a Voice Kit when it goes on sale?</a> appeared first on <a rel="nofollow" href="https://www.raspberrypi.org/magpi">The MagPi Magazine</a>.</p>
+]]></content:encoded>
+			<wfw:commentRss>https://www.raspberrypi.org/magpi/buy-aiy-projects-voice-kit/feed/</wfw:commentRss>
+		<slash:comments>13</slash:comments>
+		</item>
+		<item>
+		<title>Amazon Dash hack with Raspberry Pi and Python</title>
+		<link>https://www.raspberrypi.org/magpi/hack-amazon-dash-button-raspberry-pi/</link>
+		<comments>https://www.raspberrypi.org/magpi/hack-amazon-dash-button-raspberry-pi/#disqus_thread</comments>
+		<pubDate>Tue, 23 May 2017 12:07:16 +0000</pubDate>
+		<dc:creator><![CDATA[Russell Barnes]]></dc:creator>
+				<category><![CDATA[Step by Step]]></category>
+		<category><![CDATA[amazon]]></category>
+		<category><![CDATA[dash]]></category>
+		<category><![CDATA[iot]]></category>
+
+		<guid isPermaLink="false">https://www.raspberrypi.org/magpi/?p=4281</guid>
+		<description><![CDATA[<p>Rescue Amazon’s £5 smart button from the monotony of ordering loo roll, and use it to do anything you like</p>
+<p>The post <a rel="nofollow" href="https://www.raspberrypi.org/magpi/hack-amazon-dash-button-raspberry-pi/">Amazon Dash hack with Raspberry Pi and Python</a> appeared first on <a rel="nofollow" href="https://www.raspberrypi.org/magpi">The MagPi Magazine</a>.</p>
+]]></description>
+				<content:encoded><![CDATA[<p>Typically smart buttons cost £40, but the Amazon Dash Button costs a fiver. With a little tinkering and subversion, Amazon Dash can power anything from smart bulbs to alerts on your family’s smartphones to logging your billable hours.</p>
+<p>The Internet of Things has two flaws: the name, and the need to get your phone out of your pocket, unlock it, swipe to the appropriate app, and wait for the app to load before you can do perform a basic task, such as turning on a light. Buttons are handy for a reason: they’re exactly where they need to be, and you can just press them. So if we’re going to have smart things, we need smart buttons.</p>
+<p>Head over to Amazon to buy some Dash Buttons (you’ll need to be a Prime subscriber) and you’ll be baffled by the options: you can emergency-order raw virgin coconut oil (only £16.62 for 1.2kg), 20-sheet binding machines, or Nerf Darts with a Dash Button. The catch with these Dash Buttons is that you can only order certain products from certain firms. This matters, as Amazon will discount the price of a Dash Button from the first purchase made with it. Make sure you buy a button that lets you order something you’d buy anyway; that way, your Button is free.</p>
+<div id="attachment_4285" style="width: 560px" class="wp-caption aligncenter"><img class="size-full wp-image-4285" src="https://www.raspberrypi.org/magpi/wp-content/uploads/2017/05/dash-group-alt.jpg" alt="Hack Amazon Dash with Raspberry Pi and Python" width="550" height="336" /><p class="wp-caption-text">Hack an Amazon Dash using a Raspberry Pi and Python</p></div>
+<p>Once the Dash Button arrives, use the Amazon app (Android and iOS only) to set it up and order that first item. There are decent instructions at <a href="http://amzn.to/2mNhAqt">Amazon</a>.</p>
+<p>Once you’ve ordered your product, go back into the Dash Devices and disable it. Then – bear with us – enable the Button again, but this time don’t select a product. Instead, just quit the app (don’t quit the process, close the whole app). This will have copied your WiFi credentials to the button without re-establishing the link to Amazon. It is now an unshackled smart button ready to be repurposed.</p>
+<h3>Use Jessie Lite to hack Amazon Dash</h3>
+<p>We used Jessie Lite on our Raspberry Pi Zero W, as it will be running as a headless server with no GUI required. Once in, follow the usual update procedure: sudo apt-get update &amp;&amp; apt-get -y dist-upgrade. As your Dash Button has already accessed your router, its MAC address should be listed in your router’s logs or DHCP tables. The location differs according to manufacturer. The button will show up as ‘Internet Device’ or similar.</p>
+<p>Now we’re ready to code. The idea behind this hack is to use the Pi as an interpreter. It constantly monitors your network for the appearance of the Dash Button, then uses that appearance as a trigger for some other action. We’re going to use Python to intercept those button presses, but this requires an extra module:</p><pre class="crayon-plain-tag">sudo apt-get install -y pip
+
+sudo pip install scapy</pre><p>Pip is a Python-specific installer, and Scapy is the module we’ll use to ‘sniff’ for the Dash Button’s MAC address (pkt[ARP].hwsrc) appearing on the network. As the Dash Button only powers up when you press its button, its MAC address will only appear after a button press.</p>
+<h3>Intercept Amazon Dash button</h3>
+<p>Now that we can intercept a button press, let’s do something with it. We’ve got a LIFX smart light, so we need the LifxLAN Python module: pip install lifxlan. Open the trigger script and add the LifxLAN module’s functions to the script with the line from lifxlan import *.</p>
+<p>Now we need to find the MAC and IP address of the smart bulb from our router, and to name the bulb in the Python script using the ‘Light’ object of the LifxLAN module: bedroom = Light(&#8216;xx:xx:xx:xx:xx:xx&#8217;, &#8216;192.168.1.xxx&#8217;). We need to find the current power level of the bulb in order to toggle it, which we do with the current_state = bedroom.get_power() variable and the bedroom.set_power() commands of our if, else statements. Annoyingly, the Dash Button sends two ARP packets every time it is pressed, so we need to ignore the second ARP packet by using the second_arp Boolean variable.</p>
+<p>Once done, save your script, make it executable (chmod +x lights.py) and add it as a cronjob (crontab -e) to make sure it runs every time your Pi boots: @reboot sudo python /home/pi/lights.py.</p>
+<p>Now we’ve got a smart button that we can stick to any wall, table, desk or bookcase to turn on our smart lights. And if a LIFX bulb sounds steep at £60 each, it would cost a lot more to install a new ‘dumb’ light switch once you’ve factored in gouging cable runs in the wall, hiring plasterers to make good and repainting a whole room or hallway. People have made Dash Buttons work with Philips Hue and Samsung SmartThings devices, too.</p>
+<h3>Shoot for the (Button) Moon</h3>
+<p>So, what else could you press your Dash Button to do? Hook your Python script into an online spreadsheet and you can log the time between button presses – useful for a musician logging practice sessions, or a freelance accountant logging billable hours. Tired of shouting up the stairs for your kids to come down for dinner? You could go the JavaScript route to connect an SMS messenger: press your Dash Button and <a href="http://magpi.cc/2mt3zmo">they’ll receive a text message</a>. Or use a service like Pushover (pushover.net) to make a smart doorbell, sending alerts to your smartphone or watch.</p>
+<p>Aaron Bell has detailed how to make a hacked Dash Button into an <a href="http://magpi.cc/2msVvC5">IFTTT trigger</a>. We’d also thank Ted Benson for being one of the first <a href="http://magpi.cc/2msUzhh">Dash hackers</a>, although updated Amazon firmware is incompatible with his code.</p><pre class="crayon-plain-tag">#!/usr/bin/env python
+
+from scapy.all import *
+
+def arp_detect(pkt):
+    if pkt[ARP].op == 1: #network request
+	if pkt[ARP].hwsrc == 'xx:xx:xx:xx:xx:xx'
+		return "Button detected!"
+        
+print sniff(prn=arp_display, filter="arp", store=0)</pre><p></p><pre class="crayon-plain-tag">#! /usr/bin/env python
+
+from scapy.all import *
+from lifxlan import *
+
+#Buttons
+andrex = 'xx:xx:xx:xx:xx:xx'
+
+#Lights
+bedroom = Light('xx:xx:xx:xx:xx:xx', '192.168.1.xxx')
+
+def arp_detect(pkt):
+        if pkt[ARP].op == 1: #network request
+                if pkt[ARP].hwsrc == andrex:
+                        current_state = bedroom.get_power()
+        		if current_state == 0:
+                		bedroom.set_power("on")
+        		else:
+                		bedroom.set_power("off")
+
+sniff(prn=arp_detect, filter="arp", store=0)</pre><p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>The post <a rel="nofollow" href="https://www.raspberrypi.org/magpi/hack-amazon-dash-button-raspberry-pi/">Amazon Dash hack with Raspberry Pi and Python</a> appeared first on <a rel="nofollow" href="https://www.raspberrypi.org/magpi">The MagPi Magazine</a>.</p>
+]]></content:encoded>
+			<wfw:commentRss>https://www.raspberrypi.org/magpi/hack-amazon-dash-button-raspberry-pi/feed/</wfw:commentRss>
+		<slash:comments>7</slash:comments>
+		</item>
+		<item>
+		<title>Intro to GLSL shaders</title>
+		<link>https://www.raspberrypi.org/magpi/intro-glsl-shaders/</link>
+		<comments>https://www.raspberrypi.org/magpi/intro-glsl-shaders/#disqus_thread</comments>
+		<pubDate>Mon, 22 May 2017 10:59:38 +0000</pubDate>
+		<dc:creator><![CDATA[Russell Barnes]]></dc:creator>
+				<category><![CDATA[Walkthrough]]></category>
+		<category><![CDATA[graphics]]></category>
+		<category><![CDATA[shaders]]></category>
+
+		<guid isPermaLink="false">https://www.raspberrypi.org/magpi/?p=4275</guid>
+		<description><![CDATA[<p>Make state-of-the-art special visual effects and animations for your video games and projects</p>
+<p>The post <a rel="nofollow" href="https://www.raspberrypi.org/magpi/intro-glsl-shaders/">Intro to GLSL shaders</a> appeared first on <a rel="nofollow" href="https://www.raspberrypi.org/magpi">The MagPi Magazine</a>.</p>
+]]></description>
+				<content:encoded><![CDATA[<p>Since the 1960s, computers have had graphic interfaces: mouse pointers, windows, icons, sidebars, all the things that are now common on home PCs. It hasn’t been until the last few decades that video games have pushed the limits of visual content on the computer. Video games have reshaped the computer from the inside out, and one particular piece of hardware is responsible for the leap: the graphics processing unit (GPU). Thanks to the GPU, you can enjoy realistic 3D worlds with incredible cinematographic effects on them. GPUs can be programmed, too: the small pieces of code that run on them are called ‘shaders’. An example of this is the <a href="http://minecraftsix.com/glsl-shaders-mod/">GLSL Shaders mod pack for Minecraft</a>.</p>
+<p><em>The full article can be found in <a href="/magpi/issues/magpi/56">The MagPi 56</a> and was written by Patricio Gonzalez Vivo.</em></p>
+<h3>You&#8217;ll need</h3>
+<ul>
+<li><a href="https://github.com/patriciogonzalezvivo/glslViewer">glslViewer</a></li>
+<li><a href="https://thebookofshaders.com/">The Book of Shaders</a></li>
+</ul>
+<p>Shaders are a dry, C-like computer language designed with the main purpose of rendering an image pixel by pixel without sacrificing performance. We can think of shaders as the computer language of light.<br />
+So how do shaders work? And how are they different from other computer languages? Graphics are quite hard for regular computer programs to process. Regular programs are written to be run on the CPU; they are designed to do one task after the other – like Python, for example, where the program follows a list of orders, one line at a time.</p>
+<p>Processing a digital image requires assigning a colour to each pixel on the screen. Let’s say you have an old 800×600 monitor: that requires around 480,000 calculations. Now let’s say your image is actually an animation that needs to change 24 times per second to produce the illusion of movement. That is more than 11,520,000 calculations per second – enough calculations to freeze a CPU.</p>
+<h3>A better solution</h3>
+<p>That’s why engineers came up with a different way to process graphics on computers: they call it a GPU. You’ve probably heard it described as ‘the graphics card’. The main design difference is parallelization. The chip inside the GPU runs multiple tasks in parallel at the same time, each one independent from the others. In the first chapter of <a href="http://thebookofshaders.com">The Book of Shaders</a>, you can find a more detailed explanation of this.</p>
+<p>Learning how to program your own shaders is not simple, but it doesn’t need to be hard any more! You can find a program called <a href="https://github.com/patriciogonzalezvivo/glslViewer">glslViewer</a> on the latest Raspbian distribution. This little program is made to view shaders and follow the examples in The Book of Shaders. This gentle step-by-step guide will walk you through learning about this abstract language of light. You can print a version of the book by following the instructions in this <a href="http://thebookofshaders.com/appendix/02/">appendix chapter</a>. You will need a web browser with WebGL to both view and print the book.</p>
+<h3>Live coding with glslViewer</h3>
+<p>Running directly from the command line, glslViewer is a flexible renderer for shaders that doesn’t require a windows manager.</p>
+<p>To live-code a shader, you just need a text editor to do the coding and glslViewer will display the changes immediately. Let’s try it out!</p>
+<p>Open a Terminal window and install glslViewer:</p><pre class="crayon-plain-tag">sudo apt-get install glslviewer</pre><p>Next, open a new file call shader.frag in your favourite editor (like gedit, nano, vi, or Emacs):</p><pre class="crayon-plain-tag">nano shader.frag</pre><p>…and write in the following code:</p><pre class="crayon-plain-tag">#ifdef GL_ES
+precision mediump float;
+#endif
+
+void main() {
+  gl_FragColor = vec4(1.0,0.0,1.0,1.0);
+}</pre><p>Save the file, exit the editor, and give it a try on glslViewer:</p><pre class="crayon-plain-tag">glslViewer shader.frag -l</pre><p>You should see a magenta rectangle at the top-left corner of your screen. It’s not much, just a starting point.</p>
+<div id="attachment_4277" style="width: 809px" class="wp-caption aligncenter"><img class="size-full wp-image-4277" src="https://www.raspberrypi.org/magpi/wp-content/uploads/2017/05/05.png" alt="" width="799" height="594" /><p class="wp-caption-text">The glslViewer will render on top of everything else</p></div>
+<p>Note: the -l is to open it in live-code mode; this will open it not in full-screen, so you can keep editing it. You can also change the position and size of the viewport by using -x, -y, -w, and -h.</p>
+<p>Let’s push glslViewer to run in the background by pressing CTRL+Z. Once back in the Terminal, open your file again and you can keep editing!</p><pre class="crayon-plain-tag">nano shader.frag</pre><p>By following along with the ‘Hello World’ chapter in <a href="http://thebookofshaders.com/02/">The Book of Shaders</a>, you can learn more about what’s happening here, and how to change your code to create more complex colours and animation. Once you have finished editing, you can close your editor and close glslViewer. For that, you need to bring it from the back to the foreground by typing fg into the Terminal, and then close it with the letter Q.</p>
+<h3>Playing examples</h3>
+<p>There is a Python script, supplied with glslViewer, that will help you to download and play the examples in the book. To do this, check out the examples below and you’ll be able to get shaders working on your Raspberry Pi in no time:</p><pre class="crayon-plain-tag">glslLoader https://thebookofshaders.com/10/ikeda-00.frag
+glslLoader https://thebookofshaders.com/10/ikeda-01.frag
+glslLoader https://thebookofshaders.com/10/ikeda-02.frag
+glslLoader https://thebookofshaders.com/10/ikeda-03.frag
+glslLoader https://thebookofshaders.com/10/ikeda-04.frag</pre><p></p>
+<p>The post <a rel="nofollow" href="https://www.raspberrypi.org/magpi/intro-glsl-shaders/">Intro to GLSL shaders</a> appeared first on <a rel="nofollow" href="https://www.raspberrypi.org/magpi">The MagPi Magazine</a>.</p>
+]]></content:encoded>
+			<wfw:commentRss>https://www.raspberrypi.org/magpi/intro-glsl-shaders/feed/</wfw:commentRss>
+		<slash:comments>1</slash:comments>
+		</item>
+		<item>
+		<title>OK Google hotword for AIY Projects Voice Kit</title>
+		<link>https://www.raspberrypi.org/magpi/ok-googe-aiy-projects/</link>
+		<comments>https://www.raspberrypi.org/magpi/ok-googe-aiy-projects/#disqus_thread</comments>
+		<pubDate>Sun, 21 May 2017 12:28:17 +0000</pubDate>
+		<dc:creator><![CDATA[Russell Barnes]]></dc:creator>
+				<category><![CDATA[Tutorials]]></category>
+		<category><![CDATA[ai]]></category>
+		<category><![CDATA[aiy projects]]></category>
+		<category><![CDATA[google]]></category>
+
+		<guid isPermaLink="false">https://www.raspberrypi.org/magpi/?p=4272</guid>
+		<description><![CDATA[<p>Set up AIY Projects voice kit to respond to OK Google as a Hotword</p>
+<p>The post <a rel="nofollow" href="https://www.raspberrypi.org/magpi/ok-googe-aiy-projects/">OK Google hotword for AIY Projects Voice Kit</a> appeared first on <a rel="nofollow" href="https://www.raspberrypi.org/magpi">The MagPi Magazine</a>.</p>
+]]></description>
+				<content:encoded><![CDATA[<p>One of the most requested features for the AIY Projects Voice Kit is to set it up to respond to OK Google as a Hotword.</p>
+<p>By default, you can ask questions of the Voice Kit by pushing the button on top of the device, or by clapping your hands.</p>
+<p>But many owners would prefer to use the words &#8220;OK Google&#8221;, which is the key way to activate the Assistant across many Google consumer devices.</p>
+<p>Lots of our readers are exploring the free AIY Projects Voice Kit and where there&#8217;s a will; there&#8217;s a way.</p>
+<p>A recent update to the AIY Projects enables users to set any &#8220;hotword&#8221; they like. A hotword is a phrase you speak to activate the assistant. If you set the hotword to &#8220;OK Google&#8221; it will respond to those words, although you could choose &#8220;computer&#8221;, &#8220;hey you&#8221;, or &#8220;voice kit&#8221;, or any words you wanted.</p>
+<h3>Set up OK Google with AIY Projects Voice Kit</h3>
+<p>Ever since Google released the update with hotword support, we&#8217;ve been looking for an easy way to set it up. The good news is that there&#8217;s a great guide over on the AIY Projects forum.</p>
+<p><a href="https://www.raspberrypi.org/forums/memberlist.php?mode=viewprofile&amp;u=232974">Bastiaan Slee</a> has posted complete steps over on our <a href="https://www.raspberrypi.org/forums/viewtopic.php?f=114&amp;t=183932&amp;sid=c9fbcd88da26a158c935c6b9243b448a">AIY Projects forum</a>. The basic steps are:</p>
+<ol>
+<li>Upgrade to the latest version of the Google Assistant Library.</li>
+<li>Create a Python file in the trigger directory containing hotword.py code.</li>
+<li>Add OK Google as a hotword in the main.py file.</li>
+<li>Change trigger to hotword in the voice-recognizer.ini file.</li>
+</ol>
+<p>Of course. It&#8217;d be a lot easier if you had all the code to hand. And it&#8217;s all waiting for you over on the AIY Projects forum. So take a look at Bastiaan&#8217;s code and get OK Google working on your AIY Projects Voice Kit. We tested it out and it works just fine, and once it&#8217;s up and running you can say &#8220;OK Google&#8221; and ask a question, just like you would on other devices running the Assistant.</p>
+<p>The post <a rel="nofollow" href="https://www.raspberrypi.org/magpi/ok-googe-aiy-projects/">OK Google hotword for AIY Projects Voice Kit</a> appeared first on <a rel="nofollow" href="https://www.raspberrypi.org/magpi">The MagPi Magazine</a>.</p>
+]]></content:encoded>
+			<wfw:commentRss>https://www.raspberrypi.org/magpi/ok-googe-aiy-projects/feed/</wfw:commentRss>
+		<slash:comments>3</slash:comments>
+		</item>
+		<item>
+		<title>JustBoom Smart Remote review</title>
+		<link>https://www.raspberrypi.org/magpi/justboom-smart-remote-review/</link>
+		<comments>https://www.raspberrypi.org/magpi/justboom-smart-remote-review/#disqus_thread</comments>
+		<pubDate>Sat, 20 May 2017 13:00:07 +0000</pubDate>
+		<dc:creator><![CDATA[Russell Barnes]]></dc:creator>
+				<category><![CDATA[Reviews]]></category>
+		<category><![CDATA[kodi]]></category>
+		<category><![CDATA[media]]></category>
+		<category><![CDATA[remote]]></category>
+
+		<guid isPermaLink="false">https://www.raspberrypi.org/magpi/?p=4268</guid>
+		<description><![CDATA[<p>A minimalist AV remote with a six-axis gyro installed. Should this replace your current media remote?</p>
+<p>The post <a rel="nofollow" href="https://www.raspberrypi.org/magpi/justboom-smart-remote-review/">JustBoom Smart Remote review</a> appeared first on <a rel="nofollow" href="https://www.raspberrypi.org/magpi">The MagPi Magazine</a>.</p>
+]]></description>
+				<content:encoded><![CDATA[<p>There were always jokes about the Wii Remote looking like a TV remote control, and it looks as if the JustBoom team has taken these jokes as inspiration for a slightly different kind of media remote. While looking simplistic, with only a few buttons, the <a href="https://www.justboom.co/product/justboom-smart-remote/">Smart Remote’s</a> secret is that it contains a six-axis gyroscope that allows for a degree of motion control.</p>
+<p><em>The full article can be found in <a href="/magpi/issues/magpi/57">The MagPi 57</a> and was written by Rob Zwetsloot.</em></p>
+<p>Luckily, this feature isn’t on all the time. It is activated and deactivated by pressing the button in the middle of the volume control strip, and emulates a mouse pointer moving around the screen as the user dictates, by flicking and tilting the remote. </p>
+<p>It works pretty well, making an instant transition between modes, and can easily be recentred by turning the motion controls off and on again. We found on Kodi that it tracked across the screen fairly slowly, forcing you to bend your wrist to extreme angles to get to the corners. On Windows PCs, and indeed on the Raspberry Pi, it required less work to move around the screen.</p>
+<p>As for being a pure media remote, it does the job well. JustBoom claims that it’s designed to have the bare minimum of useful buttons for media viewing, and for Kodi this works well. The thing we missed most was a Play/Pause button, but you can definitely get used to tapping OK twice to pause, so it’s quite a minor complaint.</p>
+<p>The build quality is pretty decent as well, with the buttons making satisfying clicks as you push them. They’re also nice and large, so you’re unlikely to push the wrong one.</p>
+<p>As mentioned earlier, they do work on the Raspberry Pi desktop, which is pretty neat. The OK button works as a normal mouse click, and Back and Home work on a browser. It could well be useful in a classroom environment, as well as in the home, for media viewing.</p>
+<h3>Last word</h3>
+<p>4/5</p>
+<p>It’s a decent bit of kit with a unique feature. We’d like a Play/Pause button, but otherwise it’s perfectly serviceable.</p>
+<p>The post <a rel="nofollow" href="https://www.raspberrypi.org/magpi/justboom-smart-remote-review/">JustBoom Smart Remote review</a> appeared first on <a rel="nofollow" href="https://www.raspberrypi.org/magpi">The MagPi Magazine</a>.</p>
+]]></content:encoded>
+			<wfw:commentRss>https://www.raspberrypi.org/magpi/justboom-smart-remote-review/feed/</wfw:commentRss>
+		<slash:comments>3</slash:comments>
+		</item>
+		<item>
+		<title>Heartbeat Monitor: fitness device built with Raspberry Pi</title>
+		<link>https://www.raspberrypi.org/magpi/heartbeat-monitor/</link>
+		<comments>https://www.raspberrypi.org/magpi/heartbeat-monitor/#disqus_thread</comments>
+		<pubDate>Fri, 19 May 2017 12:39:03 +0000</pubDate>
+		<dc:creator><![CDATA[Russell Barnes]]></dc:creator>
+				<category><![CDATA[Projects]]></category>
+		<category><![CDATA[fitness]]></category>
+		<category><![CDATA[health]]></category>
+		<category><![CDATA[wearable]]></category>
+
+		<guid isPermaLink="false">https://www.raspberrypi.org/magpi/?p=4255</guid>
+		<description><![CDATA[<p>One reader turned a Raspberry Pi into a fitness device by setting it up as a heartbeat monitor</p>
+<p>The post <a rel="nofollow" href="https://www.raspberrypi.org/magpi/heartbeat-monitor/">Heartbeat Monitor: fitness device built with Raspberry Pi</a> appeared first on <a rel="nofollow" href="https://www.raspberrypi.org/magpi">The MagPi Magazine</a>.</p>
+]]></description>
+				<content:encoded><![CDATA[<p>The Raspberry Pi is increasingly being used in health applications – here’s how one maker made his own DIY Pi health device: Heartbeat Monitor.</p>
+<p>You can tell a lot of things from a heartbeat, so Daniel Fernandez has decided to create his own heart tracker with help from a Raspberry Pi.</p>
+<p>The current surge of smart watches, however long it lasts, probably owes something to the activity trackers that are synonymous with anyone trying to keep track of their fitness. These devices track the user’s heartbeat and use it to calculate things like periods of rest, calories burnt, and more.</p>
+<p>This article first appeared in The MagPi Issue #55. <a href="http://magpi.cc/2lhMhYW">Click here to download a free copy of The MagPi magazine</a>.</p>
+<h4>Build a Heartbeat Monitor from a Raspberry Pi</h4>
+<p><img class="aligncenter size-full wp-image-4257" src="https://www.raspberrypi.org/magpi/wp-content/uploads/2017/05/heartbeat1.jpg" alt="Build a Heartbeat Monitor" width="550" height="309" /></p>
+<p>“I have always liked to monitor my heartbeat while I run on the treadmill,” Daniel tells us. “There is simply no cheap, commercial solution that did everything I wanted: to plot the results in a graph that’s easy to monitor, so that you can look at them while you run, and then save the data so that you can work with it later. Furthermore, I wanted some flexibility in how the data was plotted and how often the heartbeat was updated, and to be able to retrieve the data from the device in an easy-to-process format like CSV.”</p>
+<p>So began Daniel’s build. He selected the Raspberry Pi 3 as it was a fully fledged computer with built-in Bluetooth that could fit on his treadmill. He coupled it with a Polar H7 heart sensor and a 3.5˝ screen, and 3D-printed a little case to fit it all in.</p>
+<p>“It’s not very difficult to build as most of the project is based on software,” explains Daniel. “If you have the sensor, screen, and software, you could have it working in less than a few hours. I have made the software open source and available via a <a href="http://magpi.cc/2kBj0aM">GitHub repository</a>.”</p>
+<h3>Using a Raspberry Pi fitness device</h3>
+<p>He’s been successfully using it for its intended purpose, having run 20 miles with it since he finished the project.</p>
+<p>“So far, the Raspberry Pi has always worked correctly with my heartbeat sensor,” Daniel says. “The program has always provided smooth plots and a very responsive display of my real-time heartbeat. I have been able to save my run data files and perform some more extensive mathematical analysis to better understand how my heart reacts to changes in intensity, cadence, inclination, and so on.</p>
+<ol>
+<li>Starting up: When the Pi boots up, it loads up a Python script that checks the heartbeat data from the sensor, and a Free Pascal program that plots the data.<img class="aligncenter size-full wp-image-4265" src="https://www.raspberrypi.org/magpi/wp-content/uploads/2017/05/step1-2.jpg" alt="Heartbeat Monitor" width="550" height="309" /></li>
+<li>Sending data: The heartbeat monitor automatically connects to the Pi and sends heartbeat data to the Python script. It’s saved to a text file, which is used to plot the results. <img class="aligncenter size-full wp-image-4260" src="https://www.raspberrypi.org/magpi/wp-content/uploads/2017/05/step2.jpg" alt="Heartbeat Monitor" width="550" height="309" /></li>
+<li>Saved: A reset button on the display resets the plot and saves the on-screen data to a CSV file for analysis at a later date.<img class="aligncenter size-full wp-image-4261" src="https://www.raspberrypi.org/magpi/wp-content/uploads/2017/05/step3.jpg" alt="Heartbeat Monitor" width="550" height="413" /></li>
+</ol>
+<p>“I would want to include some functionality to save my heartbeat files to my Dropbox and even have the option to share the data on my social media accounts when I finish each run. I was also thinking about connecting the treadmill’s control panel to the Raspberry Pi so that the treadmill could adjust intensity automatically to match a target heartbeat.”</p>
+<p>Other heartbeat sensors that follow the same standard as the Polar H7 should work with the project if you decide to make your own. Maybe it’s a good excuse to keep up with your New Year’s resolution?</p>
+<h3>Heartbeat Monitor facts</h3>
+<ul>
+<li>It took two days for Daniel to develop the software</li>
+<li>Daniel wants to make an open-source voice assistant</li>
+<li>If you use the project, make sure the code launches at boot</li>
+<li>Daniel is an old hand with the Raspberry Pi, using it to automate several projects</li>
+<li>The case is to protect the Pi from sweat and spilt water</li>
+</ul>
+<p>&nbsp;</p>
+<p>The post <a rel="nofollow" href="https://www.raspberrypi.org/magpi/heartbeat-monitor/">Heartbeat Monitor: fitness device built with Raspberry Pi</a> appeared first on <a rel="nofollow" href="https://www.raspberrypi.org/magpi">The MagPi Magazine</a>.</p>
+]]></content:encoded>
+			<wfw:commentRss>https://www.raspberrypi.org/magpi/heartbeat-monitor/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>FlyAI</title>
+		<link>https://www.raspberrypi.org/magpi/flyai/</link>
+		<comments>https://www.raspberrypi.org/magpi/flyai/#disqus_thread</comments>
+		<pubDate>Thu, 18 May 2017 10:43:57 +0000</pubDate>
+		<dc:creator><![CDATA[Russell Barnes]]></dc:creator>
+				<category><![CDATA[Projects]]></category>
+		<category><![CDATA[cctv]]></category>
+		<category><![CDATA[monitor]]></category>
+		<category><![CDATA[timelapse]]></category>
+
+		<guid isPermaLink="false">https://www.raspberrypi.org/magpi/?p=4247</guid>
+		<description><![CDATA[<p>The fate of the whole colony depends on a Raspberry Pi</p>
+<p>The post <a rel="nofollow" href="https://www.raspberrypi.org/magpi/flyai/">FlyAI</a> appeared first on <a rel="nofollow" href="https://www.raspberrypi.org/magpi">The MagPi Magazine</a>.</p>
+]]></description>
+				<content:encoded><![CDATA[<p>Flies crawl around inside a transparent sphere, spied on by a camera, as a disembodied voice reads out image recognition data that determines whether or not they will be fed. This is the unsettling theme of <a href="http://www.dwbowen.com/flyai">flyAI</a>, a Pi-powered art installation by David Bowen, who was inspired to create it after reading philosopher Nick Bostrom’s Superintelligence: Paths, Dangers, Strategies. The book explores the prospective effects of future super-intelligent AI on the human race and while there are some utopian possibilities, David says there are also dangers: “The AI could end up repurposing our atoms for food!”</p>
+<p><em>The full article can be found in <a href="/magpi/issues/magpi/56">The MagPi 56</a> and was written by Phil King.</em></p>
+<p>David tells us why he uses houseflies in some of his work: “They’re often a stand-in for the absurd or, thinking about collective behaviour, the will of the collective,” although their actions aren’t quite as random as you might expect: “They do like to work their way to the tops of containers; they’re attracted to light.</p>
+<p>“Also, they don’t elicit as much empathy from viewers as another living creature,” adds David. That’s probably just as well given the nature of flyAI, in which the flies’ survival depends on the accuracy of image recognition. A regular USB webcam positioned at the top of the custom-built fly chamber is connected to a Raspberry Pi 3 which employs OpenCV to determine when a fly is in view and take a still. The photo is then classified by the Google TensorFlow image recognition algorithm which ranks the top five possibilities in order, along with their percentages. The results are revealed gradually on an LCD screen, as if being typed, and also read out aloud using the Festival text-to-speech system.</p>
+<div id="attachment_4249" style="width: 1058px" class="wp-caption aligncenter"><img src="https://www.raspberrypi.org/magpi/wp-content/uploads/2017/05/caption02-flyAI_screen.jpg" alt="" width="1048" height="1600" class="size-full wp-image-4249" /><p class="wp-caption-text">The capture is analysed and classified by Google TensorFlow, which lists the top five possibilities</p></div>
+<p>If ‘fly’ is ranked number one by the algorithm – which happens around 60% of the time according to David – the flies are given some food. “So their fate is determined by how accurate this AI is.” The feeding process is also controlled by the Pi, which triggers a relay to start a pump to supply sugar water from a bucket, up through tubes into the middle of the chamber.</p>
+<p>Having run the experiment for six weeks in his workshop, David reveals that the survival rate is good: “They live for about 30-40 days, which I’m told is longer than they live in the wild… they were getting kind of geriatric!” This is despite them interfering with the image recognition in a certain way: “The flies poop all over the inside of the sphere, including where the camera is.” While David obtains his flies from an online source, he thinks they could possibly reproduce within the chamber if given the right conditions to lay their eggs.</p>
+<p>Looking to add further elements to the project, David is exploring the possibility of using the fly corpses to provide material for a microbial fuel cell that he’s working on, which in turn will power the Raspberry Pi. He would also like to implement machine learning so that the image recognition gets smarter, “so the two [Pi and flies] could be more interdependent.”</p>
+<p>The post <a rel="nofollow" href="https://www.raspberrypi.org/magpi/flyai/">FlyAI</a> appeared first on <a rel="nofollow" href="https://www.raspberrypi.org/magpi">The MagPi Magazine</a>.</p>
+]]></content:encoded>
+			<wfw:commentRss>https://www.raspberrypi.org/magpi/flyai/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>Reaction Game: build a circuit game using LEDs, buttons, and a breadboard</title>
+		<link>https://www.raspberrypi.org/magpi/reaction-game/</link>
+		<comments>https://www.raspberrypi.org/magpi/reaction-game/#disqus_thread</comments>
+		<pubDate>Wed, 17 May 2017 11:55:32 +0000</pubDate>
+		<dc:creator><![CDATA[Russell Barnes]]></dc:creator>
+				<category><![CDATA[Step by Step]]></category>
+		<category><![CDATA[circtuit]]></category>
+		<category><![CDATA[game]]></category>
+
+		<guid isPermaLink="false">https://www.raspberrypi.org/magpi/?p=4237</guid>
+		<description><![CDATA[<p>Build a reaction game using LEDs, buttons, and a breadboard circuit</p>
+<p>The post <a rel="nofollow" href="https://www.raspberrypi.org/magpi/reaction-game/">Reaction Game: build a circuit game using LEDs, buttons, and a breadboard</a> appeared first on <a rel="nofollow" href="https://www.raspberrypi.org/magpi">The MagPi Magazine</a>.</p>
+]]></description>
+				<content:encoded><![CDATA[<p>Using a breadboard and some simple components, make a super-fun reaction game while learning how to use a breadboard to make an electronic circuit, as well as programming in Python to make your game even better.</p>
+<p>The game involves a race against an opponent, but there are a handful of trick signals thrown in for good measure, so don’t get too complacent. The project is designed as an extension to the projects found in the <a href="http://magpi.cc/2eC95jz">Monk Makes Raspberry Pi Electronics Starter Kit</a>.</p>
+<p><img class="aligncenter wp-image-4240" src="https://www.raspberrypi.org/magpi/wp-content/uploads/2017/05/Reaction-Game-Circuit-Diagram.jpg" alt="Reaction Game Circuit Diagram" width="550" height="416" /></p>
+<h3>Reaction game: Connect the LEDs</h3>
+<p>Gather the components as listed on the left. Following the breadboard diagram, attach the two red LEDs to the breadboard, at either end. You must ensure that the long leg of the LED is facing down, on both LEDs.</p>
+<p>This is the positive leg, which will be connected to a positive output on the Raspberry Pi. The big RGB LED can be connected in the middle of the breadboard, on the right-hand side, as shown. There is one leg longer than the rest, which will be connected to the second hole from the top (shown by a red circle on the diagram). This is the negative leg.</p>
+<h3>Add the resistors</h3>
+<p>In order for the LEDs to work correctly, a resistor needs to be added in series to each one, limiting the flow of current so they don’t melt! You will need five resistors, as the RGB LED counts as three separate LEDs that share the same cathode (negative leg). Connect three resistors to the LED’s positive legs, bridging the gap across the centre of the breadboard, as shown in the diagram. All of the pins in each row are connected to each other inside the breadboard, with a gap in the centre.</p>
+<h3>Add the buttons</h3>
+<p>This project needs two buttons: one for each player. Some small buttons have four legs, as shown in the diagram, and a connection is made between the diagonal pins when it is pressed. If you have a button with two legs, simply connect it to the breadboard with one leg on either side of the central gap, ensuring that the jumper wires are connected to the same row as the button. As you can see from the diagram, the button will be connecting a Raspberry Pi input pin to ground when pressed.</p>
+<h3>Finish up the Reaction Game circuit</h3>
+<p>Using the five male-to-male jumper leads, follow the diagram to connect all the negative legs on the LEDs and the buttons together, which can then be connected to a ground pin on the Raspberry Pi. The eight male-to-female jumper leads can then be used to connect the positive sides of the LEDs to the Pi’s output pins, as well as connecting the two buttons and the common ground connection. Ensure that each jumper lead is connected to the correct pin on the Raspberry Pi, as this is crucial for the code to run correctly with the hardware.</p>
+<h3>Install the code</h3>
+<p>Using the latest version of Raspbian (PIXEL) on your Raspberry Pi, you can now boot up. If you are not using this version of Raspbian, you will need to install the GPIO Zero library if you haven’t already. You’ll need to make sure that your Pi is connected to the internet, via WiFi or Ethernet. When booted, open the terminal window and type:</p><pre class="crayon-plain-tag">git clone https://github.com/henrybudden/rpesk-advanced/. This</pre><p>will download the Python files from GitHub, onto your Raspberry Pi. Once this is completed, you can navigate to the folder using:</p><pre class="crayon-plain-tag">cd repsk-advanced</pre><p>And then run the game by typing:</p><pre class="crayon-plain-tag">sudo python 02_reaction_game.py.</pre><p></p>
+<h3>How to play the Reaction Game</h3>
+<p><img class="aligncenter size-full wp-image-4241" src="https://www.raspberrypi.org/magpi/wp-content/uploads/2017/05/Reaction-Game-Play.jpg" alt="Reaction Game Play" width="550" height="978" /></p>
+<p>When you run the program, you will first need to type the names of the two players. Player one’s button is located at the bottom of the breadboard and player two’s at the top (as shown on the diagram). Whenever the RGB LED in the centre of the breadboard lights up in any colour other than red, press your button as fast as you can. The first player to hit their button will gain a point. However, beware! If the RGB LED lights up in red, do not press your button. If you do, one point will be deducted from your score! After each round, the score for each player is displayed on the screen, and one of the small red LEDs on the breadboard will light up on the side of the player in the lead. If both LEDs are lit up, you are tied. Each round will begin automatically, so keep going until you get too tired.</p>
+<p>The post <a rel="nofollow" href="https://www.raspberrypi.org/magpi/reaction-game/">Reaction Game: build a circuit game using LEDs, buttons, and a breadboard</a> appeared first on <a rel="nofollow" href="https://www.raspberrypi.org/magpi">The MagPi Magazine</a>.</p>
+]]></content:encoded>
+			<wfw:commentRss>https://www.raspberrypi.org/magpi/reaction-game/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>PaPiRus Zero Medium review</title>
+		<link>https://www.raspberrypi.org/magpi/papirus-zero-epaper-review/</link>
+		<comments>https://www.raspberrypi.org/magpi/papirus-zero-epaper-review/#disqus_thread</comments>
+		<pubDate>Tue, 16 May 2017 15:25:21 +0000</pubDate>
+		<dc:creator><![CDATA[Russell Barnes]]></dc:creator>
+				<category><![CDATA[Reviews]]></category>
+		<category><![CDATA[eink]]></category>
+		<category><![CDATA[epaper]]></category>
+		<category><![CDATA[pi zero]]></category>
+
+		<guid isPermaLink="false">https://www.raspberrypi.org/magpi/?p=4234</guid>
+		<description><![CDATA[<p>An ePaper screen for the Raspberry Pi Zero</p>
+<p>The post <a rel="nofollow" href="https://www.raspberrypi.org/magpi/papirus-zero-epaper-review/">PaPiRus Zero Medium review</a> appeared first on <a rel="nofollow" href="https://www.raspberrypi.org/magpi">The MagPi Magazine</a>.</p>
+]]></description>
+				<content:encoded><![CDATA[<p>Many moons ago, we took a look at the original, full-size PaPiRus HAT. Now it’s the turn of its smaller sibling, designed specifically for use with the Pi Zero. Unlike conventional displays, it uses electronic paper (ePaper) technology to render text and images, which can remain on screen without any power connection for many days before slowly fading. Obviously, this is ideal for saving battery power in a portable project, such as a smart conference badge. The display is high contrast and readable even in bright sunlight.</p>
+<p><em>The full article can be found in <a href="/magpi/issues/magpi/57">The MagPi 57</a> and was written by Phil King.</em></p>
+<p>Like its big brother, the <a href="https://www.pi-supply.com/product/papirus-zero-epaper-screen-phat-pi-zero/">PaPiRus Zero</a> is supplied in two main parts: the pHAT board with pre-soldered female header, and the screen itself, which is very thin. Assembly involves inserting the screen’s mini ribbon cable into the connector at the side of the pHAT, then securing the screen to the board with the double-sided sticky pads supplied. We tested out the 2.0-inch Medium display with 200 × 96 pixels, but a Small 1.44-inch screen (128 × 96) is also available, along with a multi-screen pack containing both sizes.</p>
+<p>With the unit assembled and mounted on a Pi Zero’s GPIO equipped with male header (not supplied), it’s time to install the software via a single Terminal command. A second command is required to set the correct screen size, then you’re ready to roll.</p>
+<p>One of the installed folders contains a few Python code examples to get you started, including a temperature readout that makes use of the pHAT’s built-in LM75 temperature sensor. The Buttons example demonstrates the use of the pHAT’s five GPIO-connected buttons. Located along the top edge, they’re tiny but could prove useful for switching the info displayed. Other code examples include Conway’s game of life, which works well, and a digital clock. While some minor latency is noticeable as the numbers change on the latter, a ‘clear’ command can be used to wipe the display clean.</p>
+<p>The Papirus Python library includes a write function to print text strings, which can be positioned and sized, although it’s not clear how to change the font. A draw function displays a one-bit (black and white) bitmap image – The MagPi logo looked really cool! Handily, the software will convert most image types automatically.</p>
+<h3>Last word</h3>
+<p>4/5</p>
+<p>While not suitable for applications requiring a fast screen refresh, the PaPiRus Zero is ideal for saving battery power in portable projects. The ePaper display is very easy to read in all but the lowest light conditions, from any viewing angle, and features a decent 110 ppi pixel density.</p>
+<p>The post <a rel="nofollow" href="https://www.raspberrypi.org/magpi/papirus-zero-epaper-review/">PaPiRus Zero Medium review</a> appeared first on <a rel="nofollow" href="https://www.raspberrypi.org/magpi">The MagPi Magazine</a>.</p>
+]]></content:encoded>
+			<wfw:commentRss>https://www.raspberrypi.org/magpi/papirus-zero-epaper-review/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+	</channel>
+</rss>
+
+<!-- Dynamic page generated in 0.874 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2017-06-05 18:42:56 -->

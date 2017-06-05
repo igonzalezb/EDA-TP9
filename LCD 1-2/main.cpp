@@ -6,7 +6,7 @@
 // Algoritmos y Estructuras de Datos - Trabajo Práctico 9 
 //
 //
-// Gonzalez Bigliardi Iñaki			/////////////////////////////////////////
+// Gonzalez Bigliardi Iñaki			    /////////////////////////////////////////
 // Lago Valentina				   // Proyecto LCD - Fases I y II
 // Muller Malena				  //////////////////////////////////////////
 //
