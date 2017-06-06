@@ -81,6 +81,11 @@ list<Noticias>& Titulares::getList()
 	return items;
 }
 
+string Titulares::getChTitle()
+{
+	return chTitle;
+}
+
 string formatDate(string d)
 {
 	string _date;

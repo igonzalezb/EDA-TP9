@@ -41,5 +41,6 @@ public:
 	void addNoticia();
 	Noticias& getLastItem();
 	list<Noticias>& getList();
+	string getChTitle();
 
 };

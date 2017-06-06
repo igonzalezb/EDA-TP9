@@ -8,7 +8,7 @@ void printDisplay(Titulares data, LCD lcd)
 	for (auto rit = data.getList().begin(); rit != data.getList().end(); rit++)
 	{
 		showDate(lcd, rit->getDate());
-		showTitle(lcd, rit->getTitle());
+		showTitle(lcd, data.getChTitle() + ": " + rit->getTitle());
 		Sleep(5);
 		
 	}
@@ -19,10 +19,7 @@ void showDate(LCD lcd, string date)
 {
 	lcd.lcdClear();
 	lcd << date.c_str();
-
 }
-
-
 
 void showTitle(LCD lcd, string title)
 {
@@ -32,7 +29,13 @@ void showTitle(LCD lcd, string title)
 	for (int i = 0; i < title.length(); i++)
 	{
 		string title16;
-		title.copy()
+		title16 = title.substr(i, 16);
+
+		//printf("%s\n", title16.c_str());
+		lcd.lcdClearToEOL();
+		lcd << title16.c_str();
+		Sleep(5);
+
 	}
 }
 
