@@ -1,3 +1,4 @@
+
 #include "Titulares.h"
 
 string formatDate(string d);
@@ -29,9 +30,20 @@ void Noticias::setTitle(string title)
 	this->title = title;
 }
 
+string Noticias::getDate()
+{
+	return date;
+}
+
+string Noticias::getTitle()
+{
+	return title;
+}
+
 Titulares::Titulares()
 {
 	feedState = IDLE;
+	//CurrentNews = &items.back();
 }
 
 Titulares::~Titulares()
@@ -62,6 +74,11 @@ void Titulares::addNoticia()
 Noticias & Titulares::getLastItem()
 {
 	return items.back();
+}
+
+list<Noticias>& Titulares::getList()
+{
+	return items;
 }
 
 string formatDate(string d)

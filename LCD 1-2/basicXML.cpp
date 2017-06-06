@@ -1,32 +1,4 @@
-#include "Fase 3.h"
-
-#define BUFF_LEN	1000	//1 000
-
-void mainFase3(int argc, char * argv[])
-{
-	if (argc == 2)
-	{
-		XML_Parser P = XML_ParserCreate(NULL);
-		FILE * fp = fopen(argv[1], "rb");
-
-		Titulares data;
-		
-		XML_SetStartElementHandler(P, startTagCallback);	// funcion que va a encontrar cuando aparece un Start tag);
-		XML_SetEndElementHandler(P, endTagCallback);		//funcion que va a encontrar cuando aparece un End tag);
-		XML_SetCharacterDataHandler(P, chararacterDataCallback);
-		XML_SetUserData(P, &data);
-		
-		char buffer[BUFF_LEN];
-		
-		readFileToBuffer(P, fp, buffer);
-
-
-		getchar();		//Para Debug
-
-	}
-
-
-}
+#include "basicXML.h"
 
 void readFileToBuffer(XML_Parser P, FILE * fp, char buffer[])
 {

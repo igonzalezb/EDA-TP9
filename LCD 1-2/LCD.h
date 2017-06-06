@@ -18,9 +18,9 @@ public:
 
 	bool lcdClearToEOL();
 
-	basicLCD& operator<<(const unsigned char c);
+	basicLCD& operator<<(const char c);
 
-	basicLCD& operator<<(const unsigned char * c);
+	basicLCD& operator<<(const char * c);
 
 	bool lcdMoveCursorUp();
 

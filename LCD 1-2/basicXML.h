@@ -3,11 +3,9 @@
 extern "C"{
 #include <expat.h>
 };
-
 #include "Titulares.h"
 
-void mainFase3(int argc, char * argv[]);
-
+#define BUFF_LEN	1000	//1 000
 
 void readFileToBuffer(XML_Parser P, FILE * fp, char buffer[]);
 

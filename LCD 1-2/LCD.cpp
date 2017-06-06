@@ -23,7 +23,7 @@ bool LCD::lcdInitOk()
 			found = true;
 	}
 
-	const unsigned char str[] = "   ";
+	const char str[] = "   ";
 	*this << str;
 	return found;
 }
@@ -55,7 +55,7 @@ bool LCD::lcdClearToEOL()
 	return true;
 }
 
-basicLCD& LCD::operator<<(const unsigned char c)
+basicLCD& LCD::operator<<(const char c)
 {
 	lcdWriteDR(&deviceHandler,c);
 	lcdMoveCursorRight();
@@ -63,7 +63,7 @@ basicLCD& LCD::operator<<(const unsigned char c)
 	return *this;
 }
 
-basicLCD& LCD::operator<<(const unsigned char * c)
+basicLCD& LCD::operator<<(const char * c)
 {
 	for (int i = 0; c[i]!='\0'; i++)
 	{

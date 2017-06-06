@@ -20,10 +20,13 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Fase 3.cpp">
+    <ClCompile Include="Titulares.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Titulares.cpp">
+    <ClCompile Include="basicXML.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Fase3.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -40,10 +43,13 @@
     <ClInclude Include="LCD.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Fase 3.h">
+    <ClInclude Include="Titulares.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Titulares.h">
+    <ClInclude Include="basicXML.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Fase3.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

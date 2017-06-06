@@ -49,8 +49,9 @@
 
 
 #include <iostream>
-//#include "LCD.h"
-#include "Fase 3.h"
+#include "LCD.h"
+#include "basicXML.h"
+#include "Fase3.h"
 
 int main(int argc, char * argv[])
 {
@@ -68,12 +69,31 @@ int main(int argc, char * argv[])
 	const unsigned char str3[] = "chau ;)";
 	lcd << str3;*/
 
+	if (argc == 2)
+	{
+		XML_Parser P = XML_ParserCreate(NULL);
+		FILE * fp = fopen(argv[1], "rb");
 
+		Titulares data;
+		LCD lcd;
+
+		XML_SetStartElementHandler(P, startTagCallback);	// funcion que va a encontrar cuando aparece un Start tag);
+		XML_SetEndElementHandler(P, endTagCallback);		//funcion que va a encontrar cuando aparece un End tag);
+		XML_SetCharacterDataHandler(P, chararacterDataCallback);
+		XML_SetUserData(P, &data);
+
+		char buffer[BUFF_LEN];
+
+		readFileToBuffer(P, fp, buffer);
+		
+		
+
+		showDate(data, lcd);
+
+		fclose(fp);
+
+	}
 	
-	mainFase3(argc, argv);
-
-
-
 	getchar();
 
 	return EXIT_SUCCESS;

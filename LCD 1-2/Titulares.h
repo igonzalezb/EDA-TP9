@@ -20,6 +20,8 @@ public:
 	~Noticias();
 	void setDate(string date);
 	void setTitle(string title);
+	string getDate();
+	string getTitle();
 };
 
 
@@ -37,6 +39,7 @@ public:
 	State getFeedSate();
 	void setChTitle(string string);
 	void addNoticia();
-
 	Noticias& getLastItem();
+	list<Noticias>& getList();
+
 };
