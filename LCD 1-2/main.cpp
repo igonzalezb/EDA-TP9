@@ -69,7 +69,7 @@ int main(int argc, char * argv[])
 	lcd << str3;*/
 
 
-	//Testing XML
+	
 	mainFase3(argc, argv);
 
 
