@@ -12,16 +12,16 @@ FT_HANDLE& deviceHandler_lcdInit(int iDevice) //Inicializacion del modo 4 bits.
 		UCHAR Mode = 1; 	// Set asynchronous bit-bang mode
 		if (FT_SetBitMode(deviceHandler, Mask, Mode) == FT_OK)	
 		{
-			lcdWriteNibble(&deviceHandler, FUNCTION_SET_8, IR);					//1. Enviar el nibble alto de “function set” con el modo en 8 bits
-			std::this_thread::sleep_for(std::chrono::milliseconds(50));			//2. Esperar 4 ms
-			lcdWriteNibble(&deviceHandler, FUNCTION_SET_8, IR);					//3. Enviar el nibble alto de “function set” con el modo en 8 bits			
+			lcdWriteNibble(&deviceHandler, FUNCTION_SET_8, IR);			//1. Enviar el nibble alto de “function set” con el modo en 8 bits
+			std::this_thread::sleep_for(std::chrono::milliseconds(50));		//2. Esperar 4 ms
+			lcdWriteNibble(&deviceHandler, FUNCTION_SET_8, IR);			//3. Enviar el nibble alto de “function set” con el modo en 8 bits			
 			std::this_thread::sleep_for(std::chrono::microseconds(1000));		//4. Esperar 100 µs
-			lcdWriteNibble(&deviceHandler, FUNCTION_SET_8, IR);					//5. Enviar el nibble alto de “function set” con el modo en 8 bits
-			lcdWriteNibble(&deviceHandler, FUNCTION_SET_4, IR);					//6. Enviar el nibble alto de “function set” con el modo en 4 bits.
-			lcdWriteByte(&deviceHandler, FS_4B_2L_5x8, IR);						//7. Enviar la instrucción “function set” con el modo en 4 bits, 2 líneas y fuente de 5x8
-			lcdWriteByte(&deviceHandler, DISPLAY_CONTROL, IR);					//8. Enviar la instrucción “display on / off control” con todo apagado
-			lcdWriteByte(&deviceHandler, CLEAR_DISPLAY, IR);					//9. Enviar la instrucción “clear screen”
-			lcdWriteByte(&deviceHandler, ENTRY_MODE_SET, IR);					//10. Enviar la instrucción “entry mode set”
+			lcdWriteNibble(&deviceHandler, FUNCTION_SET_8, IR);			//5. Enviar el nibble alto de “function set” con el modo en 8 bits
+			lcdWriteNibble(&deviceHandler, FUNCTION_SET_4, IR);			//6. Enviar el nibble alto de “function set” con el modo en 4 bits.
+			lcdWriteByte(&deviceHandler, FS_4B_2L_5x8, IR);				//7. Enviar la instrucción “function set” con el modo en 4 bits, 2 líneas y fuente de 5x8
+			lcdWriteByte(&deviceHandler, DISPLAY_CONTROL, IR);			//8. Enviar la instrucción “display on / off control” con todo apagado
+			lcdWriteByte(&deviceHandler, CLEAR_DISPLAY, IR);			//9. Enviar la instrucción “clear screen”
+			lcdWriteByte(&deviceHandler, ENTRY_MODE_SET, IR);			//10. Enviar la instrucción “entry mode set”
 
 			return deviceHandler;
 		}	

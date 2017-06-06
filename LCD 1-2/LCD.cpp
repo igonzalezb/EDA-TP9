@@ -59,7 +59,7 @@ basicLCD& LCD::operator<<(const char c)
 {
 	lcdWriteDR(&deviceHandler,c);
 	lcdMoveCursorRight();
-	Sleep(1);
+	//Sleep(1);
 	return *this;
 }
 
@@ -84,7 +84,7 @@ bool LCD::lcdMoveCursorUp()
 	}
 	else
 	{
-		std::cout << "Couldn't move cursor" << std::endl;
+		//std::cout << "Couldn't move cursor" << std::endl;
 		status = false;
 	}
 	return status;
@@ -102,7 +102,7 @@ bool LCD::lcdMoveCursorDown()
 	}
 	else
 	{
-		std::cout << "Cannot move cursor Down" << std::endl;
+		//std::cout << "Cannot move cursor Down" << std::endl;
 		status = false;
 	}
 	return status;
@@ -204,5 +204,6 @@ void LCD::lcdUpdateCursor()
 	else
 		row = 1;
 	column = ((cadd - 1) - (row*MAX_POSITION));
+	
 	lcdWriteIR(&deviceHandler, SET_ADDRESS(column, row));
 }

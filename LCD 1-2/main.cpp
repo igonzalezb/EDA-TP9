@@ -52,6 +52,7 @@
 #include "LCD.h"
 #include "basicXML.h"
 #include "Fase3.h"
+#include <allegro5\allegro.h>
 
 int main(int argc, char * argv[])
 {
@@ -86,15 +87,114 @@ int main(int argc, char * argv[])
 
 		readFileToBuffer(P, fp, buffer);
 		
-		
+		allegroStartup();	
 
-		printDisplay(data, lcd);
+		
+		ALLEGRO_EVENT_QUEUE * event_queue = NULL;
+		event_queue = al_create_event_queue();
+		if (!event_queue)
+		{
+			fprintf(stderr, "Error Creating EventQueue\n");
+			allegroShutdown();
+			return EXIT_FAILURE;
+		}
+		ALLEGRO_TIMER * timer = NULL;
+		timer = al_create_timer(1.0 / 60.0);
+		if (!timer) {
+			fprintf(stderr, "Error Creating timer\n");
+			al_destroy_event_queue(event_queue);
+			allegroShutdown();
+			return EXIT_FAILURE;
+		}
+
+
+		auto rit = data.getList().begin();
+
+
+
+		al_register_event_source(event_queue, al_get_keyboard_event_source());
+		al_register_event_source(event_queue, al_get_timer_event_source(timer));
+		al_start_timer(timer);
+
+		bool do_exit = false;
+		while (!do_exit)
+		{
+			ALLEGRO_EVENT ev;
+			al_wait_for_event(event_queue, &ev);
+			string title = data.getChTitle() + ": " + rit->getTitle();
+			switch (ev.type)
+			{
+			case ALLEGRO_EVENT_KEY_DOWN:
+				switch (ev.keyboard.keycode)
+				{
+				case ALLEGRO_KEY_R:
+					title = data.getChTitle() + ": " + rit->getTitle();
+					break;
+				case ALLEGRO_KEY_S:
+					if (rit != data.getList().end()) {
+						rit++;
+						title = data.getChTitle() + ": " + rit->getTitle();
+					}
+						
+					break;
+				case ALLEGRO_KEY_A:
+					if (rit != data.getList().begin()) {
+						rit--;
+						title = data.getChTitle() + ": " + rit->getTitle();
+					}
+						
+					break;
+				case ALLEGRO_KEY_Q:
+					do_exit = true;
+					break;
+				case 43:
+					
+					break;
+				case ALLEGRO_KEY_MINUS: case ALLEGRO_KEY_PAD_MINUS:
+
+					break;
+				}
+				break;
+			case ALLEGRO_EVENT_TIMER:
+				showDate(lcd, rit->getDate());
+				showTitle(lcd, title);
+
+				break;
+			}
+		}
 
 		fclose(fp);
+		allegroShutdown();
 
 	}
 	
 	getchar();
 
 	return EXIT_SUCCESS;
+}
+
+
+
+bool allegroStartup(void)
+{
+	if (al_init())
+	{
+		if (al_install_keyboard())
+		{
+			return EXIT_SUCCESS;
+		}
+		else
+			fprintf(stderr, "ERROR: Failed to initialize keyboard\n");
+		al_uninstall_system();
+						
+	}
+	else
+		fprintf(stderr, "ERROR: Failed to load primitives addon \n");
+	return EXIT_FAILURE;
+}
+
+void allegroShutdown(void)
+{
+	al_uninstall_keyboard();
+	al_uninstall_system();
 }
