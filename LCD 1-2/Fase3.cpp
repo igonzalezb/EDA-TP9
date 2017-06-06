@@ -2,30 +2,39 @@
 #include "Fase3.h"
 
 
-void printDisplay()
+void printDisplay(Titulares data, LCD lcd)
 {
 
-}
-
-
-void showDate(Titulares data, LCD lcd)
-{
-	
 	for (auto rit = data.getList().begin(); rit != data.getList().end(); rit++)
 	{
-		lcd << rit->getDate().c_str();
+		showDate(lcd, rit->getDate());
+		showTitle(lcd, rit->getTitle());
 		Sleep(5);
-		lcd.lcdClear();
+		
 	}
+}
+
+
+void showDate(LCD lcd, string date)
+{
+	lcd.lcdClear();
+	lcd << date.c_str();
 
 }
 
 
 
-//void showTitle(Titulares data, LCD lcd)
-//{
-//
-//}
+void showTitle(LCD lcd, string title)
+{
+	/*lcd.lcdMoveCursorDown();
+	lcd.lcdClearToEOL();*/
+
+	for (int i = 0; i < title.length(); i++)
+	{
+		string title16;
+		title.copy()
+	}
+}
 
 
 

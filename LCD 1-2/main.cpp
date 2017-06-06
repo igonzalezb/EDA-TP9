@@ -88,7 +88,7 @@ int main(int argc, char * argv[])
 		
 		
 
-		showDate(data, lcd);
+		printDisplay(data, lcd);
 
 		fclose(fp);
 
