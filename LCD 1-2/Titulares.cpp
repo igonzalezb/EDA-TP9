@@ -88,7 +88,7 @@ State Titulares::getFeedSate()
 	return feedState;
 }
 
-void Titulares::setChTitle(string string)	//VER
+void Titulares::setChTitle(string string)
 {
 	chTitle = string;
 }
