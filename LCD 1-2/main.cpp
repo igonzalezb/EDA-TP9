@@ -54,22 +54,11 @@
 #include "Fase3.h"
 #include <allegro5\allegro.h>
 
+bool allegroStartup(void);
+void allegroShutdown(void);
+
 int main(int argc, char * argv[])
 {
-	/*LCD lcd;
-
-	const unsigned char str1[] = "Finalmente ANDA."; 
-	lcd << str1;
-	Sleep(8);
-	lcd.lcdClear();
-	const unsigned char str2[] = "By group 1 :)";
-	lcd << str2;
-	Sleep(8);
-	lcd.lcdClear();
-	lcd.lcdMoveCursorDown();
-	const unsigned char str3[] = "chau ;)";
-	lcd << str3;*/
-
 	if (argc == 2)
 	{
 		XML_Parser P = XML_ParserCreate(NULL);
@@ -83,9 +72,7 @@ int main(int argc, char * argv[])
 		XML_SetCharacterDataHandler(P, chararacterDataCallback);
 		XML_SetUserData(P, &data);
 
-		char buffer[BUFF_LEN];
-
-		readFileToBuffer(P, fp, buffer);
+		readFileToBuffer(P, fp);
 		
 		allegroStartup();	
 
@@ -98,78 +85,129 @@ int main(int argc, char * argv[])
 			allegroShutdown();
 			return EXIT_FAILURE;
 		}
+		double speed = 2.0;
 		ALLEGRO_TIMER * timer = NULL;
-		timer = al_create_timer(1.0 / 60.0);
+		timer = al_create_timer(speed);
 		if (!timer) {
 			fprintf(stderr, "Error Creating timer\n");
 			al_destroy_event_queue(event_queue);
 			allegroShutdown();
 			return EXIT_FAILURE;
 		}
+		
+		ALLEGRO_DISPLAY *display = NULL;
+		display = al_create_display(200, 200);
+		if (!display) {
+			fprintf(stderr, "Error Creating timer\n");
+			al_destroy_event_queue(event_queue);
+			al_destroy_timer(timer);
+			allegroShutdown();
+			return EXIT_FAILURE;
+		}
 
 
 		auto rit = data.getList().begin();
-
+		string title = data.getChTitle() + ": " + rit->getTitle();
+		showDate(lcd, rit->getDate());
+		showTitle(lcd, title);
 
 
 		al_register_event_source(event_queue, al_get_keyboard_event_source());
 		al_register_event_source(event_queue, al_get_timer_event_source(timer));
 		al_start_timer(timer);
 
-		bool do_exit = false;
+		bool do_exit = false, redraw = false;
+		
 		while (!do_exit)
 		{
 			ALLEGRO_EVENT ev;
 			al_wait_for_event(event_queue, &ev);
-			string title = data.getChTitle() + ": " + rit->getTitle();
+			
 			switch (ev.type)
 			{
 			case ALLEGRO_EVENT_KEY_DOWN:
 				switch (ev.keyboard.keycode)
 				{
 				case ALLEGRO_KEY_R:
+					printf("r\n");
 					title = data.getChTitle() + ": " + rit->getTitle();
 					break;
 				case ALLEGRO_KEY_S:
+					printf("s\n");
 					if (rit != data.getList().end()) {
 						rit++;
+						showDate(lcd, rit->getDate());
 						title = data.getChTitle() + ": " + rit->getTitle();
 					}
 						
 					break;
 				case ALLEGRO_KEY_A:
+					printf("a\n");
 					if (rit != data.getList().begin()) {
 						rit--;
+						if (rit != data.getList().begin())
+							rit--;
+						showDate(lcd, rit->getDate());
 						title = data.getChTitle() + ": " + rit->getTitle();
 					}
 						
 					break;
 				case ALLEGRO_KEY_Q:
+					printf("q\n");
+					lcd.lcdClear();
 					do_exit = true;
 					break;
-				case 43:
-					
+				case ALLEGRO_KEY_EQUALS:
+					printf("+\n");
+					if (speed > 0.5) {
+						speed -= 0.1;
+						al_set_timer_speed(timer, speed);
+					}
+						
 					break;
-				case ALLEGRO_KEY_MINUS: case ALLEGRO_KEY_PAD_MINUS:
-
+				case ALLEGRO_KEY_MINUS:
+					printf("-\n");
+					speed += 0.1;
+					al_set_timer_speed(timer, speed);
 					break;
 				}
 				break;
 			case ALLEGRO_EVENT_TIMER:
-				showDate(lcd, rit->getDate());
-				showTitle(lcd, title);
-
+				redraw = true;
 				break;
+			}
+
+			if (redraw)
+			{
+				showTitle(lcd, title);
+				if (title.length() > 0)
+					title.erase(0, 1);
+				else {
+					if (rit != data.getList().end()) {
+						rit++;
+						title = data.getChTitle() + ": " + rit->getTitle();
+						showDate(lcd, rit->getDate());
+					}
+					else
+					{
+						lcd.lcdClear();
+						lcd << "Ultima Noticia";
+					}
+					
+				}
+				redraw = false;
 			}
 		}
 
 		fclose(fp);
+
+		al_destroy_event_queue(event_queue);
+		al_destroy_timer(timer);
+		al_destroy_display(display);
 		allegroShutdown();
 
 	}
 	
-	getchar();
-
 	return EXIT_SUCCESS;
 }
 

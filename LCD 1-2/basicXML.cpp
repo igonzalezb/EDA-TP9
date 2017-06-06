@@ -1,7 +1,8 @@
 #include "basicXML.h"
 
-void readFileToBuffer(XML_Parser P, FILE * fp, char buffer[])
+void readFileToBuffer(XML_Parser P, FILE * fp)
 {
+	char buffer[BUFF_LEN];
 	int allFileRead = 0;
 	size_t buflen = 0;
 	do {

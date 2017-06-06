@@ -7,7 +7,7 @@ extern "C"{
 
 #define BUFF_LEN	1000	//1 000
 
-void readFileToBuffer(XML_Parser P, FILE * fp, char buffer[]);
+void readFileToBuffer(XML_Parser P, FILE * fp);
 
 void startTagCallback(void *userData, const XML_Char *name, const XML_Char **atts);
 
